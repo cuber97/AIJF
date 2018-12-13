@@ -38,7 +38,7 @@ public final class TreeCompilationListener extends jfk1BaseListener {
         try {
             this._mv.visitLdcInsn(Main.parse(ctx.getText()));
         } catch (ParseException e) {
-            throw new IllegalArgumentException("containers.ListT is not of the containers.ListT type.");
+            throw new IllegalArgumentException("containers.ExpressionContainer is not of the containers.ExpressionContainer type.");
         }
     }
 
@@ -59,7 +59,7 @@ public final class TreeCompilationListener extends jfk1BaseListener {
 
         switch(((Token) ctxList).getType()){
             case jfk1Parser.Reverse:
-                this._mv.visitInsn(Opcodes.INVOKESTATIC,"containers/ListT", "reverse", "()");
+                this._mv.visitInsn(Opcodes.INVOKESTATIC,"containers/ExpressionContainer", "reverse", "()");
 
 
         }

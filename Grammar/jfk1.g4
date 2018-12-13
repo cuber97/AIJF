@@ -43,9 +43,10 @@ NewLine       : ( CARRAIGE_RETURN | LINE_FEED )+ -> skip;
 number    : IntPart
           | PointFloat;
 
-listT     : '{' (number ',')* number '}'
+listBase     : '{' (number ',')* number '}'
           | '{}'
           ;
+listT : listBase;
 
 /*A)OPERACJE*/
 operationsReturningList :
