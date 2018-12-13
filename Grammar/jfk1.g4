@@ -43,11 +43,9 @@ NewLine       : ( CARRAIGE_RETURN | LINE_FEED )+ -> skip;
 number    : IntPart
           | PointFloat;
 
-listBase     : '{' (number ',')* number '}'
+listT     : '{' (number ',')* number '}'
           | '{}'
           ;
-
-listT     : listBase ;
 
 /*A)OPERACJE*/
 operationsReturningList :
@@ -116,14 +114,13 @@ basicExpressionsReturningList :
 (
 listT
 |operationsReturningList
-| ((operationsReturningList (Add|Subtract|Multiply))* operationsReturningList)
 );
 
 /*Rozszerza basicExpressionsReturningList*/
 extendedExpressionsReturningList :
 (
 basicExpressionsReturningList
-| (( basicExpressionsReturningList (Add|Subtract|Multiply))* (extendedExpressionsReturningNumber))
+| (( basicExpressionsReturningList (Add|Subtract|Multiply))+ (extendedExpressionsReturningNumber))
 );
 /*------------------------------------*/
 
@@ -133,14 +130,13 @@ basicExpressionsReturningNumber :
 (
 number
 |operationsReturningNumber
-| ((operationsReturningNumber (Add|Subtract|Multiply))* operationsReturningNumber)
 );
 
 /*Rozszerza basicExpressionsReturningNumber*/
 extendedExpressionsReturningNumber :
 (
 basicExpressionsReturningNumber
-| ((basicExpressionsReturningNumber (Add|Subtract|Multiply))* basicExpressionsReturningNumber)
+| ((basicExpressionsReturningNumber (Add|Subtract|Multiply))+ basicExpressionsReturningNumber)
 );
 /*------------------------------------*/
 
@@ -151,6 +147,3 @@ extendedExpressionsReturningList
 extendedExpressionsReturningNumber
 )
 ;
-
-// 2+2 + max({2,3}) + 1 + max({4,5}) + min({6,7})
-//join(take({1,2,3,4,5},max(take(join({1,2},{3,4}),max({2,3,4,5,5})))),take({1,2,3,4,5},max(take(join({1,2},{3,4}),max({2,3,4,5,5})))))
