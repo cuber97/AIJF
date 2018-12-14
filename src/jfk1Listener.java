@@ -17,16 +17,6 @@ public interface jfk1Listener extends ParseTreeListener {
 	 */
 	void exitNumber(jfk1Parser.NumberContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link jfk1Parser#listBase}.
-	 * @param ctx the parse tree
-	 */
-	void enterListBase(jfk1Parser.ListBaseContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link jfk1Parser#listBase}.
-	 * @param ctx the parse tree
-	 */
-	void exitListBase(jfk1Parser.ListBaseContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link jfk1Parser#listT}.
 	 * @param ctx the parse tree
 	 */
@@ -57,45 +47,25 @@ public interface jfk1Listener extends ParseTreeListener {
 	 */
 	void exitOperationsReturningNumber(jfk1Parser.OperationsReturningNumberContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link jfk1Parser#basicExpressionsReturningList}.
+	 * Enter a parse tree produced by {@link jfk1Parser#expressionsReturningList}.
 	 * @param ctx the parse tree
 	 */
-	void enterBasicExpressionsReturningList(jfk1Parser.BasicExpressionsReturningListContext ctx);
+	void enterExpressionsReturningList(jfk1Parser.ExpressionsReturningListContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link jfk1Parser#basicExpressionsReturningList}.
+	 * Exit a parse tree produced by {@link jfk1Parser#expressionsReturningList}.
 	 * @param ctx the parse tree
 	 */
-	void exitBasicExpressionsReturningList(jfk1Parser.BasicExpressionsReturningListContext ctx);
+	void exitExpressionsReturningList(jfk1Parser.ExpressionsReturningListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link jfk1Parser#extendedExpressionsReturningList}.
+	 * Enter a parse tree produced by {@link jfk1Parser#expressionsReturningNumber}.
 	 * @param ctx the parse tree
 	 */
-	void enterExtendedExpressionsReturningList(jfk1Parser.ExtendedExpressionsReturningListContext ctx);
+	void enterExpressionsReturningNumber(jfk1Parser.ExpressionsReturningNumberContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link jfk1Parser#extendedExpressionsReturningList}.
+	 * Exit a parse tree produced by {@link jfk1Parser#expressionsReturningNumber}.
 	 * @param ctx the parse tree
 	 */
-	void exitExtendedExpressionsReturningList(jfk1Parser.ExtendedExpressionsReturningListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link jfk1Parser#basicExpressionsReturningNumber}.
-	 * @param ctx the parse tree
-	 */
-	void enterBasicExpressionsReturningNumber(jfk1Parser.BasicExpressionsReturningNumberContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link jfk1Parser#basicExpressionsReturningNumber}.
-	 * @param ctx the parse tree
-	 */
-	void exitBasicExpressionsReturningNumber(jfk1Parser.BasicExpressionsReturningNumberContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link jfk1Parser#extendedExpressionsReturningNumber}.
-	 * @param ctx the parse tree
-	 */
-	void enterExtendedExpressionsReturningNumber(jfk1Parser.ExtendedExpressionsReturningNumberContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link jfk1Parser#extendedExpressionsReturningNumber}.
-	 * @param ctx the parse tree
-	 */
-	void exitExtendedExpressionsReturningNumber(jfk1Parser.ExtendedExpressionsReturningNumberContext ctx);
+	void exitExpressionsReturningNumber(jfk1Parser.ExpressionsReturningNumberContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link jfk1Parser#expression}.
 	 * @param ctx the parse tree

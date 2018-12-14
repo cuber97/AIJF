@@ -12,6 +12,7 @@ import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
 import java.util.Scanner;
 
+import static java.lang.System.err;
 import static java.lang.System.out;
 
 public class Main {
@@ -42,28 +43,20 @@ public class Main {
         //parser.removeErrorListeners();
         parser.setBuildParseTree(true);
         //ParseTree tree = parser.expression();
-
-        ParserRuleContext tree = parser.expression();
-        TreeEvaluationVisitor visitor = new TreeEvaluationVisitor();
-        visitor.visit(tree);
-
         int errors = parser.getNumberOfSyntaxErrors();
+        ParserRuleContext tree = parser.expression();
 
+        if (0 == errors) {
 
-        out.println("Number of syntax errors: " + errors);
-        out.println(tree.toStringTree(parser));
-
-      /*  if (0 == errors) {
             TreeEvaluationVisitor visitor = new TreeEvaluationVisitor();
-            double result = visitor.visit(tree);
-            out.println("Result = " + result);
+            visitor.visit(tree);
 
             // Synteza
             if (args.length > 0)
                 compile(tree, args[0]);
             else
                 compile(tree);
-        }*/
+        }
     }
 
     private static void compile(ParseTree tree) {

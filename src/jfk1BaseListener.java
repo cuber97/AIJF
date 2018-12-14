@@ -27,18 +27,6 @@ public class jfk1BaseListener implements jfk1Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterListBase(jfk1Parser.ListBaseContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitListBase(jfk1Parser.ListBaseContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterListT(jfk1Parser.ListTContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -75,49 +63,25 @@ public class jfk1BaseListener implements jfk1Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBasicExpressionsReturningList(jfk1Parser.BasicExpressionsReturningListContext ctx) { }
+	@Override public void enterExpressionsReturningList(jfk1Parser.ExpressionsReturningListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBasicExpressionsReturningList(jfk1Parser.BasicExpressionsReturningListContext ctx) { }
+	@Override public void exitExpressionsReturningList(jfk1Parser.ExpressionsReturningListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExtendedExpressionsReturningList(jfk1Parser.ExtendedExpressionsReturningListContext ctx) { }
+	@Override public void enterExpressionsReturningNumber(jfk1Parser.ExpressionsReturningNumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExtendedExpressionsReturningList(jfk1Parser.ExtendedExpressionsReturningListContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterBasicExpressionsReturningNumber(jfk1Parser.BasicExpressionsReturningNumberContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBasicExpressionsReturningNumber(jfk1Parser.BasicExpressionsReturningNumberContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExtendedExpressionsReturningNumber(jfk1Parser.ExtendedExpressionsReturningNumberContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExtendedExpressionsReturningNumber(jfk1Parser.ExtendedExpressionsReturningNumberContext ctx) { }
+	@Override public void exitExpressionsReturningNumber(jfk1Parser.ExpressionsReturningNumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -23,13 +23,6 @@ public class jfk1BaseVisitor<T> extends AbstractParseTreeVisitor<T> implements j
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitListBase(jfk1Parser.ListBaseContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
 	@Override public T visitListT(jfk1Parser.ListTContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
@@ -51,28 +44,14 @@ public class jfk1BaseVisitor<T> extends AbstractParseTreeVisitor<T> implements j
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBasicExpressionsReturningList(jfk1Parser.BasicExpressionsReturningListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpressionsReturningList(jfk1Parser.ExpressionsReturningListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExtendedExpressionsReturningList(jfk1Parser.ExtendedExpressionsReturningListContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitBasicExpressionsReturningNumber(jfk1Parser.BasicExpressionsReturningNumberContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitExtendedExpressionsReturningNumber(jfk1Parser.ExtendedExpressionsReturningNumberContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpressionsReturningNumber(jfk1Parser.ExpressionsReturningNumberContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

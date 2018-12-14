@@ -16,12 +16,6 @@ public interface jfk1Visitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitNumber(jfk1Parser.NumberContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link jfk1Parser#listBase}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitListBase(jfk1Parser.ListBaseContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link jfk1Parser#listT}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -40,29 +34,17 @@ public interface jfk1Visitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitOperationsReturningNumber(jfk1Parser.OperationsReturningNumberContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link jfk1Parser#basicExpressionsReturningList}.
+	 * Visit a parse tree produced by {@link jfk1Parser#expressionsReturningList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBasicExpressionsReturningList(jfk1Parser.BasicExpressionsReturningListContext ctx);
+	T visitExpressionsReturningList(jfk1Parser.ExpressionsReturningListContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link jfk1Parser#extendedExpressionsReturningList}.
+	 * Visit a parse tree produced by {@link jfk1Parser#expressionsReturningNumber}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExtendedExpressionsReturningList(jfk1Parser.ExtendedExpressionsReturningListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link jfk1Parser#basicExpressionsReturningNumber}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBasicExpressionsReturningNumber(jfk1Parser.BasicExpressionsReturningNumberContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link jfk1Parser#extendedExpressionsReturningNumber}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExtendedExpressionsReturningNumber(jfk1Parser.ExtendedExpressionsReturningNumberContext ctx);
+	T visitExpressionsReturningNumber(jfk1Parser.ExpressionsReturningNumberContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link jfk1Parser#expression}.
 	 * @param ctx the parse tree

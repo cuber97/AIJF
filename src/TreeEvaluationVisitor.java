@@ -1,125 +1,91 @@
 import containers.ExpressionContainer;
 
-import java.util.Collections;
-
 public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionContainer> {
-    /*
-    @Override
-    public Double visitNumber(PolishNotationParser.NumberContext ctx) throws IllegalArgumentException {
-        try {
-            return Main.parse(ctx.getText());
-        } catch (java.text.ParseException e) {
-            throw new IllegalArgumentException();
-        }
-    }*/
-
 
     @Override public ExpressionContainer visitNumber(jfk1Parser.NumberContext ctx) {
-        //System.out.println("TEST NUMBER = " + ctx.getText());
         try {
-        return new ExpressionContainer(Main.parse(ctx.getText()));
+        double number = Main.parse(ctx.getText());
+        return new ExpressionContainer(number);
     } catch (java.text.ParseException e) {
         throw new IllegalArgumentException();
     } }
 
-    @Override public ExpressionContainer visitListBase(jfk1Parser.ListBaseContext ctx) {
+    @Override public ExpressionContainer visitListT(jfk1Parser.ListTContext ctx) {
         ExpressionContainer childItems = new ExpressionContainer();
+        Double childNumber;
         for(int i = 1 ; i < ctx.getChildCount() ; i+=2){
-            childItems.getItemContainer().add(visit(ctx.getChild(i)).getFirstListValue());
+            childNumber = visit(ctx.getChild(i)).removeNumber();
+            childItems.addNumber(childNumber);
         }
-
         return childItems;
     }
 
-    @Override public ExpressionContainer visitListT(jfk1Parser.ListTContext ctx) {
-        return visit(ctx.getChild(0));
-    }
-
     @Override public ExpressionContainer visitOperationsReturningNumber(jfk1Parser.OperationsReturningNumberContext ctx) {
+        if(ctx.getChildCount() == 0) return new ExpressionContainer();
+        ExpressionContainer par1 = visit(ctx.getChild(2));
+        ExpressionContainer par2 = new ExpressionContainer();
 
-        ExpressionContainer childList = visit(ctx.getChild(2));
+        try{par2 = visit(ctx.getChild(4));
+        }catch (NullPointerException e){};
 
-        switch(ctx.op1ArgList.getType()){
-            case jfk1Parser.Max:{
-                double max = Collections.max(childList.getItemContainer());
-                childList.clearContainer();
-                childList.addNumber(max);
-                System.out.println("Max = " + max);
+        if(ctx.op1ArgList != null){
+        switch(ctx.op1ArgList.getType()) {
+            case jfk1Parser.Max: {
+                par1 = jfk1OpImpl.max(par1);
+                System.out.print("Max = ");
                 break;
             }
-            case jfk1Parser.Min:{
-                double min = Collections.min(childList.getItemContainer());
-                childList.clearContainer();
-                childList.addNumber(min);
-                System.out.println("Min = " + min);
+            case jfk1Parser.Min: {
+                par1 = jfk1OpImpl.min(par1);
+                System.out.print("Min = ");
                 break;
             }
         }
-
-    return childList;
-
+        }
+    System.out.println(par1.toStringNumber());
+    return par1;
 }
+    @Override public ExpressionContainer visitOperationsReturningList(jfk1Parser.OperationsReturningListContext ctx) {
+        if(ctx.getChildCount() == 0) return new ExpressionContainer();
+        ExpressionContainer par1 = visit(ctx.getChild(2));
+        ExpressionContainer par2 = new ExpressionContainer();
 
-    @Override public ExpressionContainer visitExtendedExpressionsReturningNumber(jfk1Parser.ExtendedExpressionsReturningNumberContext ctx) {
-            ExpressionContainer childItems = new ExpressionContainer();
-            //System.out.println("test " + ctx.getChild(0).getText());
-            for (int i = 0; i < ctx.getChildCount(); i += 2) {
-                childItems.addNumber(visit(ctx.getChild(i)).getFirstListValue());
-            }
-            //System.out.println("TEST" + childItems.removeFirstListElement()+ " " + childItems.removeFirstListElement());
-            //System.out.println("Lista " + childItems.getItemContainer().toString());
+        try{par2 = visit(ctx.getChild(4));
+        }catch (NullPointerException e){};
 
-
-            double opVal = childItems.removeFirstListElement();
-            for (int i = 1; i < ctx.getChildCount(); i += 2) {
-                switch (ctx.getChild(i).getText()) {
-                    case "+": {
-                        opVal += childItems.removeFirstListElement();
-                        System.out.println(opVal);
-                    }
+        if(ctx.op1ArgList != null) {
+            switch (ctx.op1ArgList.getType()) {
+                case jfk1Parser.Reverse: {
+                    jfk1OpImpl.reverse(par1);
+                    System.out.print("Reverse = ");
+                    break;
                 }
             }
-            System.out.println("Suma = " + opVal);
-            return childItems;
+        }if(ctx.op2ArgListList != null) {
+            switch (ctx.op2ArgListList.getType()) {
+                case jfk1Parser.Join: {
+                    jfk1OpImpl.join(par1, par2);
+                    System.out.print("Join = ");
+                }
+            }
+        }
+        System.out.println(par1.toStringList());
+        return par1;
 
     }
 
-    /*
-    @Override
-    public Double visitExpression(jfk1Parser.ExpressionContext ctx) {
+    @Override public ExpressionContainer visitExpression(jfk1Parser.ExpressionContext ctx) {
+        ExpressionContainer childList = visit(ctx.getChild(0));
 
-        if (null == ctx.op) // '(' operation ')'
-            return visit(ctx.operation(0));
-
-        Function<Double, Double, Double> operand;
-        switch(ctx.op.getType()) {
-            case PolishNotationParser.Multiply:
-                operand = (a, b) -> a * b;
-                break;
-            case PolishNotationParser.Divide:
-                operand = (a, b) -> a / b;
-                break;
-            case PolishNotationParser.Add:
-                operand = (a, b) -> a + b;
-                break;
-            case PolishNotationParser.Subtract:
-                operand = (a, b) -> a - b;
-                break;
-            case PolishNotationParser.Power:
-                operand = Math::pow;
-                break;
-            case PolishNotationParser.Max:
-                operand = Math::max;
-                break;
-            case PolishNotationParser.Min:
-                operand = Math::min;
-                break;
-            default:
-                throw new IllegalArgumentException();
+        System.out.print("Expression result = ");
+        switch(childList.getcType()){
+            case Number: {System.out.println(childList.toStringNumber()); break;}
+            case List: {System.out.println(childList.toStringList()); break;}
+            case Empty: {System.out.println("Expression returned empty!"); break;}
         }
 
-        double left = visit(ctx.getChild(1));
-        double right = visit(ctx.getChild(2));
-        return operand.binary(left, right);
-    }*/
+        System.out.println("End of Expression...");
+        return childList;
+    }
+
 }

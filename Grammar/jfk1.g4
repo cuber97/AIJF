@@ -11,11 +11,11 @@ List          : 'list' ;
 Range         : 'range';
 Reverse       : 'reverse';
 Join          : 'join';
-Add           : '+';
-Multiply      : '*';
+Add           : 'add';
+Multiply      : 'mult';
 Power         : 'pow';
 Sort          : 'sort';
-Subtract      : '-';
+Subtract      : 'sub';
 Length        : 'length';
 Total         : 'total';
 Count         : 'count';
@@ -43,10 +43,9 @@ NewLine       : ( CARRAIGE_RETURN | LINE_FEED )+ -> skip;
 number    : IntPart
           | PointFloat;
 
-listBase     : '{' (number ',')* number '}'
+listT     : '{' (number ',')* number '}'
           | '{}'
           ;
-listT : listBase;
 
 /*A)OPERACJE*/
 operationsReturningList :
@@ -58,15 +57,18 @@ operationsReturningList :
      |Sort
      |List
 /*------------------------------------*/
-)('('extendedExpressionsReturningList')'))
+)('('expressionsReturningList')'))
 |
 (op2ArgListNumber=(
 /*Lista operacji z argumentami (listT,number)*/
 Take
 |Drop
 |Power
+|Add
+|Subtract
+|Multiply
 /*------------------------------------*/
-)('('extendedExpressionsReturningList ',' extendedExpressionsReturningNumber ')'))
+)('('expressionsReturningList ',' expressionsReturningNumber ')'))
 |
 (op2ArgListList=(
 /*Lista operacji z argumentami (listT,listT)*/
@@ -75,7 +77,7 @@ Join
 |Subtract
 |Multiply
 /*------------------------------------*/
-)('('extendedExpressionsReturningList ',' extendedExpressionsReturningList ')'))
+)('('expressionsReturningList ',' expressionsReturningList ')'))
 |
 )
 ;
@@ -91,60 +93,45 @@ Length
 |Min
 |Max
 /*------------------------------------*/
-)('('extendedExpressionsReturningList')'))
+)('('expressionsReturningList')'))
 |
 (op2ArgListNumber=(
 /*Lista operacji z argumentami (listT,number)*/
 Count
 |Position
 /*------------------------------------*/
-)('('extendedExpressionsReturningList ',' extendedExpressionsReturningNumber ')'))
+)('('expressionsReturningList ',' expressionsReturningNumber ')'))
 |
 (op3ArgListList=(
 /*Lista operacji z argumentami (listT,listT)*/
 None
 |None
 /*------------------------------------*/
-)('('extendedExpressionsReturningList ',' extendedExpressionsReturningList ')'))
+)('('expressionsReturningList ',' expressionsReturningList ')'))
 );
 
 /*B)WYRAZENIA (w podziale na typ zwracanego el.)*/
 /*1)Zwracane listT*/
 /*------------------------------------*/
-basicExpressionsReturningList :
+expressionsReturningList :
 (
 listT
 |operationsReturningList
 );
 
-/*Rozszerza basicExpressionsReturningList*/
-extendedExpressionsReturningList :
-(
-basicExpressionsReturningList
-| (( basicExpressionsReturningList (Add|Subtract|Multiply))+ (extendedExpressionsReturningNumber))
-);
-/*------------------------------------*/
 
 /*2)Zwracane number*/
 /*------------------------------------*/
-basicExpressionsReturningNumber :
+expressionsReturningNumber :
 (
 number
 |operationsReturningNumber
 );
 
-/*Rozszerza basicExpressionsReturningNumber*/
-extendedExpressionsReturningNumber :
-(
-basicExpressionsReturningNumber
-| ((basicExpressionsReturningNumber (Add|Subtract|Multiply))+ basicExpressionsReturningNumber)
-);
-/*------------------------------------*/
-
 /*C)CALY ZBIOR WYRAZEN*/
 expression:(
-extendedExpressionsReturningList
+expressionsReturningList
 |
-extendedExpressionsReturningNumber
+expressionsReturningNumber
 )
 ;
