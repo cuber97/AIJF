@@ -3,6 +3,7 @@ import containers.ExpressionContainer;
 public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionContainer> {
 
     @Override public ExpressionContainer visitNumber(jfk1Parser.NumberContext ctx) {
+        System.out.print(ctx.getText());
         try {
         double number = Main.parse(ctx.getText());
         return new ExpressionContainer(number);
@@ -14,7 +15,7 @@ public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionConta
         ExpressionContainer childItems = new ExpressionContainer();
         Double childNumber;
         for(int i = 1 ; i < ctx.getChildCount() ; i+=2){
-            childNumber = visit(ctx.getChild(i)).removeNumber();
+            childNumber = visit(ctx.getChild(i)).removeElement();
             childItems.addNumber(childNumber);
         }
         return childItems;
@@ -31,12 +32,12 @@ public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionConta
         if(ctx.op1ArgList != null){
         switch(ctx.op1ArgList.getType()) {
             case jfk1Parser.Max: {
-                par1 = jfk1OpImpl.max(par1);
+                jfk1OpImpl.max(par1);
                 System.out.print("Max = ");
                 break;
             }
             case jfk1Parser.Min: {
-                par1 = jfk1OpImpl.min(par1);
+                jfk1OpImpl.min(par1);
                 System.out.print("Min = ");
                 break;
             }

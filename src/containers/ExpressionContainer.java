@@ -72,26 +72,8 @@ public class ExpressionContainer {
 
     //Remove methods
     //Number
-    public Double removeNumber() {
-        String exceptionText =  "removeNumber() called on wrong container Type! ["
-        + this.getcType()+"] ";
-         callExceptionIfWrongType(exceptionText,Type.Number);
+    public Double removeElement() {
          return this.itemContainer.remove(0);
-    }
-
-    //List
-    public Double removeListElement() { //Remove first el. on the list
-        String exceptionText =  "removeListElement() called on wrong container Type! ["
-                + this.getcType()+"] ";
-        callExceptionIfWrongType(exceptionText,Type.List);
-        return this.itemContainer.remove(0);
-    }
-
-    public Double removeListElement(int index) { //Remove i el. on the list
-        String exceptionText =  "removeListElement() called on wrong container Type! ["
-                + this.getcType()+"] ";
-        callExceptionIfWrongType(exceptionText,Type.List);
-        return this.itemContainer.remove(index);
     }
 
     //toString Methods
