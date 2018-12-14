@@ -3,7 +3,6 @@ import containers.ExpressionContainer;
 public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionContainer> {
 
     @Override public ExpressionContainer visitNumber(jfk1Parser.NumberContext ctx) {
-        System.out.print(ctx.getText());
         try {
         double number = Main.parse(ctx.getText());
         return new ExpressionContainer(number);
@@ -62,7 +61,8 @@ public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionConta
                     break;
                 }
             }
-        }if(ctx.op2ArgListList != null) {
+        }
+        if(ctx.op2ArgListList != null) {
             switch (ctx.op2ArgListList.getType()) {
                 case jfk1Parser.Join: {
                     jfk1OpImpl.join(par1, par2);

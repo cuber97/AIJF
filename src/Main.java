@@ -20,8 +20,8 @@ public class Main {
 
     static {
         DecimalFormatSymbols _symbols = new DecimalFormatSymbols();
-        _symbols.setDecimalSeparator('.'); // ustawia separator dziesietny na .
-        _symbols.setGroupingSeparator(Character.MIN_VALUE); //
+        _symbols.setDecimalSeparator('.');
+        _symbols.setGroupingSeparator(Character.MIN_VALUE);
         _format.setDecimalFormatSymbols(_symbols);
     }
 
@@ -42,10 +42,9 @@ public class Main {
         jfk1Parser parser = new jfk1Parser(tokenStream);
         //parser.removeErrorListeners();
         parser.setBuildParseTree(true);
-        //ParseTree tree = parser.expression();
+        ParseTree tree = parser.expression();
         int errors = parser.getNumberOfSyntaxErrors();
-        ParserRuleContext tree = parser.expression();
-
+        System.out.println("Errors " + errors);
         if (0 == errors) {
 
             TreeEvaluationVisitor visitor = new TreeEvaluationVisitor();
