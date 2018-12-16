@@ -45,10 +45,13 @@ public class Main {
         ParseTree tree = parser.expression();
         int errors = parser.getNumberOfSyntaxErrors();
         System.out.println("Errors " + errors);
+        out.println(tree.toStringTree(parser));
+
         if (0 == errors) {
 
             TreeEvaluationVisitor visitor = new TreeEvaluationVisitor();
             visitor.visit(tree);
+
 
             // Synteza
             if (args.length > 0)
