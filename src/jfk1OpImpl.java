@@ -119,5 +119,65 @@ public class jfk1OpImpl {
         return;
     }
 
+    public static void add(ExpressionContainer par1, ExpressionContainer par2) {
+        for(int i = 0; i < par1.getItemContainer().size() && i < par2.getItemContainer().size(); ++i) {
+            double tmp = par1.getItemContainer().get(i) + par2.getItemContainer().get(i);
+            par1.getItemContainer().set(i, tmp);
+        }
+    }
+
+    public static void substract(ExpressionContainer par1, ExpressionContainer par2) {
+        for(int i = 0; i < par1.getItemContainer().size() && i < par2.getItemContainer().size(); ++i) {
+            double tmp = par1.getItemContainer().get(i) - par2.getItemContainer().get(i);
+            par1.getItemContainer().set(i, tmp);
+        }
+    }
+
+    public static void multiply(ExpressionContainer par1, ExpressionContainer par2) {
+        for(int i = 0; i < par1.getItemContainer().size() && i < par2.getItemContainer().size(); ++i) {
+            double tmp = par1.getItemContainer().get(i) * par2.getItemContainer().get(i);
+            par1.getItemContainer().set(i, tmp);
+        }
+    }
+
     //3)Arg <List,Number>
+
+    public static void add(ExpressionContainer par1, double par2) {
+        for(int i = 0; i < par1.getItemContainer().size(); ++i) {
+            par1.getItemContainer().set(i, par1.getItemContainer().get(i) + par2);
+        }
+    }
+
+    public static void substract(ExpressionContainer par1, double par2) {
+        for(int i = 0; i < par1.getItemContainer().size(); ++i) {
+            par1.getItemContainer().set(i, par1.getItemContainer().get(i) - par2);
+        }
+    }
+
+    public static void multiply(ExpressionContainer par1, double par2) {
+        for(int i = 0; i < par1.getItemContainer().size(); ++i) {
+            par1.getItemContainer().set(i, par1.getItemContainer().get(i) * par2);
+        }
+    }
+
+    public static void power(ExpressionContainer par1, double par2) {
+        for(int i = 0; i < par1.getItemContainer().size(); ++i) {
+            par1.getItemContainer().set(i, Math.pow(par1.getItemContainer().get(i), par2));
+        }
+    }
+
+    public static void take(ExpressionContainer par1, double par2) {
+        int size = par1.getItemContainer().size();
+
+        for(int i = (int)par2; i < size; ++i) {
+            par1.getItemContainer().remove((int)par2);
+        }
+    }
+
+    public static void drop(ExpressionContainer par1, double par2) {
+
+        for(int i = 0; i < par2; ++i) {
+            par1.getItemContainer().remove(0);
+        }
+    }
 }

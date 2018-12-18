@@ -15,7 +15,7 @@ Add           : 'add';
 Multiply      : 'mult';
 Power         : 'pow';
 Sort          : 'sort';
-Subtract      : 'sub';
+Substract      : 'sub';
 Length        : 'length';
 Total         : 'total';
 Count         : 'count';
@@ -65,7 +65,7 @@ Take
 |Drop
 |Power
 |Add
-|Subtract
+|Substract
 |Multiply
 /*------------------------------------*/
 )('('expressionsReturningList ',' expressionsReturningNumber ')'))
@@ -74,7 +74,7 @@ Take
 /*Lista operacji z argumentami (listT,listT)*/
 Join
 |Add
-|Subtract
+|Substract
 |Multiply
 /*------------------------------------*/
 )('('expressionsReturningList ',' expressionsReturningList ')'))
