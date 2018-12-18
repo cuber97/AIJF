@@ -17,7 +17,7 @@ public class jfk1Parser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, List=7, Range=8, Reverse=9, 
-		Join=10, Add=11, Multiply=12, Power=13, Sort=14, Subtract=15, Length=16, 
+		Join=10, Add=11, Multiply=12, Power=13, Sort=14, Substract=15, Length=16,
 		Total=17, Count=18, First=19, Last=20, Min=21, Max=22, IntegerDigits=23, 
 		Take=24, Drop=25, Position=26, None=27, IntPart=28, PointFloat=29, WhiteSpace=30, 
 		NewLine=31;
@@ -246,7 +246,7 @@ public class jfk1Parser extends Parser {
 		public TerminalNode Drop() { return getToken(jfk1Parser.Drop, 0); }
 		public TerminalNode Power() { return getToken(jfk1Parser.Power, 0); }
 		public TerminalNode Add() { return getToken(jfk1Parser.Add, 0); }
-		public TerminalNode Subtract() { return getToken(jfk1Parser.Subtract, 0); }
+		public TerminalNode Subtract() { return getToken(jfk1Parser.Substract, 0); }
 		public TerminalNode Multiply() { return getToken(jfk1Parser.Multiply, 0); }
 		public ExpressionsReturningNumberContext expressionsReturningNumber() {
 			return getRuleContext(ExpressionsReturningNumberContext.class,0);
@@ -312,7 +312,7 @@ public class jfk1Parser extends Parser {
 				setState(36);
 				((OperationsReturningListContext)_localctx).op2ArgListNumber = _input.LT(1);
 				_la = _input.LA(1);
-				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Add) | (1L << Multiply) | (1L << Power) | (1L << Subtract) | (1L << Take) | (1L << Drop))) != 0)) ) {
+				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Add) | (1L << Multiply) | (1L << Power) | (1L << Substract) | (1L << Take) | (1L << Drop))) != 0)) ) {
 					((OperationsReturningListContext)_localctx).op2ArgListNumber = (Token)_errHandler.recoverInline(this);
 				}
 				else {
@@ -341,7 +341,7 @@ public class jfk1Parser extends Parser {
 				setState(43);
 				((OperationsReturningListContext)_localctx).op2ArgListList = _input.LT(1);
 				_la = _input.LA(1);
-				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Join) | (1L << Add) | (1L << Multiply) | (1L << Subtract))) != 0)) ) {
+				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Join) | (1L << Add) | (1L << Multiply) | (1L << Substract))) != 0)) ) {
 					((OperationsReturningListContext)_localctx).op2ArgListList = (Token)_errHandler.recoverInline(this);
 				}
 				else {
@@ -590,7 +590,7 @@ public class jfk1Parser extends Parser {
 			case Multiply:
 			case Power:
 			case Sort:
-			case Subtract:
+			case Substract:
 			case IntegerDigits:
 			case Take:
 			case Drop:
@@ -732,7 +732,7 @@ public class jfk1Parser extends Parser {
 			case Multiply:
 			case Power:
 			case Sort:
-			case Subtract:
+			case Substract:
 			case IntegerDigits:
 			case Take:
 			case Drop:

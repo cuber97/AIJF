@@ -21,26 +21,66 @@ public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionConta
     }
 
     @Override public ExpressionContainer visitOperationsReturningNumber(jfk1Parser.OperationsReturningNumberContext ctx) {
-        if(ctx.getChildCount() == 0) return new ExpressionContainer();
+        if (ctx.getChildCount() == 0) return new ExpressionContainer();
         ExpressionContainer par1 = visit(ctx.getChild(2));
         ExpressionContainer par2 = new ExpressionContainer();
 
-        try{par2 = visit(ctx.getChild(4));
-        }catch (NullPointerException e){};
+        try {
+            par2 = visit(ctx.getChild(4));
+        } catch (NullPointerException e) {
+        }
+        ;
 
-        if(ctx.op1ArgList != null){
-        switch(ctx.op1ArgList.getType()) {
-            case jfk1Parser.Max: {
-                jfk1OpImpl.max(par1);
-                System.out.print("Max = ");
-                break;
-            }
-            case jfk1Parser.Min: {
-                jfk1OpImpl.min(par1);
-                System.out.print("Min = ");
-                break;
+        // if(par2.getcType() == ExpressionContainer.Type.Number)
+
+        if (ctx.op1ArgList != null) {
+            switch (ctx.op1ArgList.getType()) {
+                case jfk1Parser.Max: {
+                    jfk1OpImpl.max(par1);
+                    System.out.print("Max = ");
+                    break;
+                }
+                case jfk1Parser.Min: {
+                    jfk1OpImpl.min(par1);
+                    System.out.print("Min = ");
+                    break;
+                }
+                case jfk1Parser.First: {
+                    jfk1OpImpl.first(par1);
+                    System.out.print("First = ");
+                    break;
+                }
+                case jfk1Parser.Last: {
+                    jfk1OpImpl.last(par1);
+                    System.out.print("Last = ");
+                    break;
+                }
+                case jfk1Parser.Length: {
+                    jfk1OpImpl.length(par1);
+                    System.out.print("Length = ");
+                    break;
+                }
+                case jfk1Parser.Total: {
+                    jfk1OpImpl.total(par1);
+                    System.out.println("Total = ");
+                    break;
+                }
             }
         }
+
+        if (ctx.op2ArgListNumber != null) {
+            switch (ctx.op2ArgListNumber.getType()) {
+                case jfk1Parser.Count: {
+                    jfk1OpImpl.count(par1, par2.removeElement());
+                    System.out.print("Count = ");
+                    break;
+                }
+                case jfk1Parser.Position: {
+                    jfk1OpImpl.position(par1, par2.removeElement());
+                    System.out.print("Position = ");
+                    break;
+                }
+            }
         }
     System.out.println(par1.toStringNumber());
     return par1;
@@ -60,6 +100,16 @@ public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionConta
                     System.out.print("Reverse = ");
                     break;
                 }
+                case jfk1Parser.Sort: {
+                    jfk1OpImpl.sort(par1);
+                    System.out.print("Sort = ");
+                    break;
+                }
+                case jfk1Parser.List: {
+                    jfk1OpImpl.list(par1);
+                    System.out.print("List = ");
+                    break;
+                }
             }
         }
         if(ctx.op2ArgListList != null) {
@@ -67,6 +117,74 @@ public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionConta
                 case jfk1Parser.Join: {
                     jfk1OpImpl.join(par1, par2);
                     System.out.print("Join = ");
+                    break;
+                }
+                case jfk1Parser.Add: {
+                    if(par2.getcType() == ExpressionContainer.Type.Number) {
+                        break;
+                    }
+                    jfk1OpImpl.add(par1, par2);
+                    System.out.print("Add = ");
+                    break;
+                }
+                case jfk1Parser.Substract: {
+                    if(par2.getcType() == ExpressionContainer.Type.Number) {
+                        break;
+                    }
+                    jfk1OpImpl.substract(par1, par2);
+                    System.out.print("Substract = ");
+                    break;
+                }
+                case jfk1Parser.Multiply: {
+                    if(par2.getcType() == ExpressionContainer.Type.Number) {
+                        break;
+                    }
+                    jfk1OpImpl.multiply(par1, par2);
+                    System.out.print("Multiply = ");
+                    break;
+                }
+            }
+        }
+        if(ctx.op2ArgListNumber != null) {
+            switch (ctx.op2ArgListNumber.getType()) {
+                case jfk1Parser.Take: {
+                    jfk1OpImpl.take(par1, par2.removeElement());
+                    System.out.print("Take = ");
+                    break;
+                }
+                case jfk1Parser.Drop: {
+                    jfk1OpImpl.drop(par1, par2.removeElement());
+                    System.out.print("Drop = ");
+                    break;
+                }
+                case jfk1Parser.Power: {
+                    jfk1OpImpl.power(par1, par2.removeElement());
+                    System.out.print("Power = ");
+                    break;
+                }
+                case jfk1Parser.Add: {
+                    if(par2.getcType() == ExpressionContainer.Type.List) {
+                        break;
+                    }
+                    jfk1OpImpl.add(par1, par2.removeElement());
+                    System.out.print("Add = ");
+                    break;
+                }
+                case jfk1Parser.Substract: {
+                    if(par2.getcType() == ExpressionContainer.Type.List) {
+                        break;
+                    }
+                    jfk1OpImpl.substract(par1, par2.removeElement());
+                    System.out.print("Substract = ");
+                    break;
+                }
+                case jfk1Parser.Multiply: {
+                    if(par2.getcType() == ExpressionContainer.Type.List) {
+                        break;
+                    }
+                    jfk1OpImpl.multiply(par1, par2.removeElement());
+                    System.out.print("Multiply = ");
+                    break;
                 }
             }
         }
