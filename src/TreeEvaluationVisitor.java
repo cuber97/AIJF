@@ -17,6 +17,8 @@ public final class TreeEvaluationVisitor extends jfk1BaseVisitor<ExpressionConta
             childNumber = visit(ctx.getChild(i)).removeElement();
             childItems.addNumber(childNumber);
         }
+        if(childItems.getcType() == ExpressionContainer.Type.Number)
+        childItems.changeContainerType(ExpressionContainer.Type.List);
         return childItems;
     }
 
