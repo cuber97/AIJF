@@ -5,7 +5,7 @@ fragment TABULATION     : '\u0009'; // '\t'
 fragment LINE_FEED      : '\u000A'; // '\n'
 fragment CARRAIGE_RETURN: '\u000D'; // '\r'
 fragment DOT            : '.';
-fragment FRACTION       : DOT [0-9]* '1'..'9';
+fragment FRACTION       : DOT [0-9]* '0'..'9';
 
 List          : 'list' ;
 Range         : 'range';
