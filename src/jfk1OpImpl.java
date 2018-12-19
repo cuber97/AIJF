@@ -82,10 +82,16 @@ public class jfk1OpImpl {
     }
 
     public static void position(ExpressionContainer par1, double par2){
-        double position = 0;
+        double position = 1;
 
         for(double element : par1.getItemContainer()){
-            //na razie zostawiamy
+            if(element == par2) break;
+            position++;
+        }
+
+        if(position > par1.getContainerLength()) {
+            position = 0;
+            System.out.println("Brak podanego elementu w liście, zwrócono wartość 0");
         }
 
         par1.clearContainer();
@@ -176,6 +182,10 @@ public class jfk1OpImpl {
 
     public static void drop(ExpressionContainer par1, double par2) {
 
+        if(par2 > par1.getContainerLength()) {
+            par1.clearContainer();
+            return;
+        }
         for(int i = 0; i < par2; ++i) {
             par1.getItemContainer().remove(0);
         }
