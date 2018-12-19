@@ -44,7 +44,7 @@ public class Main {
             jfk1Lexer lexer = new jfk1Lexer(charStream);
             TokenStream tokenStream = new CommonTokenStream(lexer);
             jfk1Parser parser = new jfk1Parser(tokenStream);
-            //parser.removeErrorListeners();
+
             parser.setBuildParseTree(true);
             ParseTree tree = parser.expression();
             int errors = parser.getNumberOfSyntaxErrors();
@@ -55,36 +55,10 @@ public class Main {
 
                 TreeEvaluationVisitor visitor = new TreeEvaluationVisitor();
                 visitor.visit(tree);
-
-
-                // Synteza
-                if (args.length > 0)
-                    compile(tree, args[0]);
-                else
-                    compile(tree);
             }
         }
     }
 
-    private static void compile(ParseTree tree) {
-        compile(tree, "Grammar/out/CompilationClass.class");
-    }
 
-    private static void compile(ParseTree tree, String classPath) {
-        if (null == tree)
-            throw new NullPointerException("parse tree cannot be null.");
 
-        try {
-            Path path = Paths.get(classPath);
-            byte[] bytes = Files.readAllBytes(path);
-            ClassReader cr = new ClassReader(bytes);
-            //ClassWriter cw = new ClassWriter(cr, ClassWriter.COMPUTE_MAXS); // no need to calculate visitMaxs(int maxStack, int maxLocals) arguments
-            ClassWriter cw = new ClassWriter(cr, 0);
-            cr.accept(new CompilationClassVisitor(cw, tree), 0);
-            bytes = cw.toByteArray();
-            Files.write(path, bytes);
-        } catch (IOException e) {
-            out.println("CompilationClass.class not found.");
-        }
-    }
 }

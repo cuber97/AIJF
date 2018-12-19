@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2991382a-4563-43c2-a7c5-520a796178eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grammar/jfk1.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Grammar/jfk1.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/TreeEvaluationVisitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/TreeEvaluationVisitor$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/TreeEvaluationVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/TreeEvaluationVisitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1BaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1BaseListener.class" afterDir="false" />
@@ -22,7 +20,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$OperationsReturningNumberContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$OperationsReturningNumberContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Visitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Visitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jfk1Lexer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,14 +92,14 @@
         <counts>
           <entry key="g4" value="94" />
           <entry key="java" value="190" />
-          <entry key="txt" value="101" />
+          <entry key="txt" value="125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="ANTLR v4 grammar file" value="94" />
           <entry key="JAVA" value="190" />
-          <entry key="PLAIN_TEXT" value="101" />
+          <entry key="PLAIN_TEXT" value="125" />
         </counts>
       </usages-collector>
     </session>
@@ -112,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Grammar/jfk1.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -289,7 +286,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545254391371" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545254723235" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -332,7 +329,7 @@
       <workItem from="1545076066143" duration="5000" />
       <workItem from="1545154494000" duration="3000" />
       <workItem from="1545154649768" duration="5513000" />
-      <workItem from="1545249099534" duration="4995000" />
+      <workItem from="1545249099534" duration="5252000" />
     </task>
     <task id="LOCAL-00001" summary="fixed error on visitListT">
       <created>1545249809291</created>
@@ -355,14 +352,22 @@
       <option name="project" value="LOCAL" />
       <updated>1545253598083</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add minor fix to numbers">
+      <created>1545254414718</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545254414718</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13453000" />
+    <option name="totallyTimeSpent" value="13710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26174498" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -406,7 +411,8 @@
     <MESSAGE value="fixed error on visitListT" />
     <MESSAGE value="improved expression display" />
     <MESSAGE value="added negative numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="added negative numbers" />
+    <MESSAGE value="add minor fix to numbers" />
+    <option name="LAST_COMMIT_MESSAGE" value="add minor fix to numbers" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/out/production/JFK_L1/jfk1Visitor.class">
@@ -534,8 +540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Grammar/jfk1.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="135" column="5" selection-start-line="135" selection-start-column="5" selection-end-line="135" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
         </state>
       </provider>
     </entry>
