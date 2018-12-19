@@ -39,8 +39,13 @@ NewLine       : ( CARRAIGE_RETURN | LINE_FEED )+ -> skip;
 
 
 /*OBIEKTY PODSTAWOWE*/
-number    : IntPart
+pNumber    : IntPart
           | PointFloat;
+
+mNumber    : '-'pNumber;
+
+number: pNumber | mNumber;
+
 
 listT     : '{' (number ',')* number '}'
           | '{}'

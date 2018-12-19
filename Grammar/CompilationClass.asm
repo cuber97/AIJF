@@ -40,11 +40,8 @@ mv.visitEnd();
 {
 mv = cw.visitMethod(ACC_PRIVATE + ACC_STATIC, "execute", "()D", null, null);
 mv.visitCode();
-mv.visitLdcInsn(new Double("3.0"));
-mv.visitLdcInsn(new Double("3.0"));
-mv.visitInsn(DADD);
 mv.visitInsn(DRETURN);
-mv.visitMaxs(4, 0);
+mv.visitMaxs(0, 0);
 mv.visitEnd();
 }
 cw.visitEnd();

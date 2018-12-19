@@ -107,6 +107,7 @@ public class jfk1OpImpl {
     }
 
     public static ExpressionContainer list(ExpressionContainer par1){
+        par1.changeContainerType(ExpressionContainer.Type.List);
         return par1;
     }
 

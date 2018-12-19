@@ -16,6 +16,20 @@ public class jfk1BaseVisitor<T> extends AbstractParseTreeVisitor<T> implements j
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitPNumber(jfk1Parser.PNumberContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitMNumber(jfk1Parser.MNumberContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitNumber(jfk1Parser.NumberContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

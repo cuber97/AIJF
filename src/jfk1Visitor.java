@@ -10,6 +10,18 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface jfk1Visitor<T> extends ParseTreeVisitor<T> {
 	/**
+	 * Visit a parse tree produced by {@link jfk1Parser#pNumber}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPNumber(jfk1Parser.PNumberContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link jfk1Parser#mNumber}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMNumber(jfk1Parser.MNumberContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link jfk1Parser#number}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

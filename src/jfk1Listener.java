@@ -7,6 +7,26 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface jfk1Listener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link jfk1Parser#pNumber}.
+	 * @param ctx the parse tree
+	 */
+	void enterPNumber(jfk1Parser.PNumberContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link jfk1Parser#pNumber}.
+	 * @param ctx the parse tree
+	 */
+	void exitPNumber(jfk1Parser.PNumberContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link jfk1Parser#mNumber}.
+	 * @param ctx the parse tree
+	 */
+	void enterMNumber(jfk1Parser.MNumberContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link jfk1Parser#mNumber}.
+	 * @param ctx the parse tree
+	 */
+	void exitMNumber(jfk1Parser.MNumberContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link jfk1Parser#number}.
 	 * @param ctx the parse tree
 	 */
