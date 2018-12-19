@@ -106,13 +106,10 @@ public class jfk1OpImpl {
         return;
     }
 
-    public static void list(ExpressionContainer par1){
-        //NOP
+    public static ExpressionContainer list(ExpressionContainer par1){
+        return par1;
     }
 
-    public static void integerDigits(ExpressionContainer par1){
-        //NOP//to powinno przyjmwoac double
-    }
 
     public static void sort(ExpressionContainer par1){
         Collections.sort(par1.getItemContainer());

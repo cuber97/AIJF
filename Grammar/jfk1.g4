@@ -23,7 +23,6 @@ First         : 'first';
 Last          : 'last';
 Min           : 'min';
 Max           : 'max';
-IntegerDigits : 'integerDigits';
 Take          : 'take';
 Drop          : 'drop';
 Position      : 'position';

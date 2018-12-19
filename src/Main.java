@@ -30,34 +30,39 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String input;
-        out.println("Key in the input string:");
-        try (Scanner reader = new Scanner(System.in)) {
-            input = reader.nextLine();
-        }
+        while(true) {
+            String input ="";
+            out.println("Key in the input string:");
+            Scanner reader = new Scanner(System.in);
+            try  {
+                input = reader.nextLine();
+            }catch (Exception e){}
 
-        CharStream charStream = CharStreams.fromString(input);
-        jfk1Lexer lexer = new jfk1Lexer(charStream);
-        TokenStream tokenStream = new CommonTokenStream(lexer);
-        jfk1Parser parser = new jfk1Parser(tokenStream);
-        //parser.removeErrorListeners();
-        parser.setBuildParseTree(true);
-        ParseTree tree = parser.expression();
-        int errors = parser.getNumberOfSyntaxErrors();
-        System.out.println("Errors " + errors);
-        out.println(tree.toStringTree(parser));
+            if(input.equals("exit")){return;}
 
-        if (0 == errors) {
+            CharStream charStream = CharStreams.fromString(input);
+            jfk1Lexer lexer = new jfk1Lexer(charStream);
+            TokenStream tokenStream = new CommonTokenStream(lexer);
+            jfk1Parser parser = new jfk1Parser(tokenStream);
+            //parser.removeErrorListeners();
+            parser.setBuildParseTree(true);
+            ParseTree tree = parser.expression();
+            int errors = parser.getNumberOfSyntaxErrors();
+            System.out.println("Errors " + errors);
+            out.println(tree.toStringTree(parser));
 
-            TreeEvaluationVisitor visitor = new TreeEvaluationVisitor();
-            visitor.visit(tree);
+            if (0 == errors) {
+
+                TreeEvaluationVisitor visitor = new TreeEvaluationVisitor();
+                visitor.visit(tree);
 
 
-            // Synteza
-            if (args.length > 0)
-                compile(tree, args[0]);
-            else
-                compile(tree);
+                // Synteza
+                if (args.length > 0)
+                    compile(tree, args[0]);
+                else
+                    compile(tree);
+            }
         }
     }
 

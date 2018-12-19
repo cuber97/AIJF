@@ -81,14 +81,18 @@ public class ExpressionContainer {
     public String toStringNumber() { //return String representation of Number
         String exceptionText =  "toStringNumber() called on wrong container Type! ["
                 + this.getcType()+"] ";
-        callExceptionIfWrongType(exceptionText,Type.Number);
+            try {
+            callExceptionIfWrongType(exceptionText, Type.Number);
+        }catch(WrongTypeException e){}
         return this.getItemContainer().get(0).toString();
     }
     //List
     public String toStringList() { //return String representation of List
         String exceptionText =  "toStringList() called on wrong container Type! ["
                 + this.getcType()+"] ";
+        try {
         callExceptionIfWrongType(exceptionText,Type.List);
+    }catch(WrongTypeException e){}
         return this.getItemContainer().toString();
     }
 
