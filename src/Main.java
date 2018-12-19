@@ -44,7 +44,7 @@ public class Main {
             jfk1Lexer lexer = new jfk1Lexer(charStream);
             TokenStream tokenStream = new CommonTokenStream(lexer);
             jfk1Parser parser = new jfk1Parser(tokenStream);
-
+            //parser.removeErrorListeners();
             parser.setBuildParseTree(true);
             ParseTree tree = parser.expression();
             int errors = parser.getNumberOfSyntaxErrors();
@@ -58,7 +58,5 @@ public class Main {
             }
         }
     }
-
-
 
 }

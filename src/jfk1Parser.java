@@ -19,8 +19,7 @@ public class jfk1Parser extends Parser {
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, List=8, Range=9, 
 		Reverse=10, Join=11, Add=12, Multiply=13, Power=14, Sort=15, Substract=16, 
 		Length=17, Total=18, Count=19, First=20, Last=21, Min=22, Max=23, Take=24, 
-		Drop=25, Position=26, None=27, IntPart=28, PointFloat=29, WhiteSpace=30, 
-		NewLine=31, IntegerDigits=32;
+		Drop=25, Position=26, IntPart=27, PointFloat=28, WhiteSpace=29, NewLine=30;
 	public static final int
 		RULE_pNumber = 0, RULE_mNumber = 1, RULE_number = 2, RULE_listT = 3, RULE_operationsReturningList = 4, 
 		RULE_operationsReturningNumber = 5, RULE_expressionsReturningList = 6, 
@@ -34,13 +33,13 @@ public class jfk1Parser extends Parser {
 		null, "'-'", "'{'", "','", "'}'", "'{}'", "'('", "')'", "'list'", "'range'", 
 		"'reverse'", "'join'", "'add'", "'mult'", "'pow'", "'sort'", "'sub'", 
 		"'length'", "'total'", "'count'", "'first'", "'last'", "'min'", "'max'", 
-		"'take'", "'drop'", "'position'", "'none'"
+		"'take'", "'drop'", "'position'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, null, null, null, "List", "Range", "Reverse", 
 		"Join", "Add", "Multiply", "Power", "Sort", "Substract", "Length", "Total", 
-		"Count", "First", "Last", "Min", "Max", "Take", "Drop", "Position", "None", 
-		"IntPart", "PointFloat", "WhiteSpace", "NewLine", "IntegerDigits"
+		"Count", "First", "Last", "Min", "Max", "Take", "Drop", "Position", "IntPart", 
+		"PointFloat", "WhiteSpace", "NewLine"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -342,7 +341,6 @@ public class jfk1Parser extends Parser {
 		public Token op2ArgListNumber;
 		public Token op2ArgListList;
 		public TerminalNode Reverse() { return getToken(jfk1Parser.Reverse, 0); }
-		public TerminalNode IntegerDigits() { return getToken(jfk1Parser.IntegerDigits, 0); }
 		public TerminalNode Sort() { return getToken(jfk1Parser.Sort, 0); }
 		public TerminalNode List() { return getToken(jfk1Parser.List, 0); }
 		public List<ExpressionsReturningListContext> expressionsReturningList() {
@@ -396,7 +394,7 @@ public class jfk1Parser extends Parser {
 				setState(42);
 				((OperationsReturningListContext)_localctx).op1ArgList = _input.LT(1);
 				_la = _input.LA(1);
-				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << List) | (1L << Reverse) | (1L << Sort) | (1L << IntegerDigits))) != 0)) ) {
+				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << List) | (1L << Reverse) | (1L << Sort))) != 0)) ) {
 					((OperationsReturningListContext)_localctx).op1ArgList = (Token)_errHandler.recoverInline(this);
 				}
 				else {
@@ -494,25 +492,20 @@ public class jfk1Parser extends Parser {
 	public static class OperationsReturningNumberContext extends ParserRuleContext {
 		public Token op1ArgList;
 		public Token op2ArgListNumber;
-		public Token op3ArgListList;
 		public TerminalNode Length() { return getToken(jfk1Parser.Length, 0); }
 		public TerminalNode Total() { return getToken(jfk1Parser.Total, 0); }
 		public TerminalNode First() { return getToken(jfk1Parser.First, 0); }
 		public TerminalNode Last() { return getToken(jfk1Parser.Last, 0); }
 		public TerminalNode Min() { return getToken(jfk1Parser.Min, 0); }
 		public TerminalNode Max() { return getToken(jfk1Parser.Max, 0); }
-		public List<ExpressionsReturningListContext> expressionsReturningList() {
-			return getRuleContexts(ExpressionsReturningListContext.class);
-		}
-		public ExpressionsReturningListContext expressionsReturningList(int i) {
-			return getRuleContext(ExpressionsReturningListContext.class,i);
+		public ExpressionsReturningListContext expressionsReturningList() {
+			return getRuleContext(ExpressionsReturningListContext.class,0);
 		}
 		public TerminalNode Count() { return getToken(jfk1Parser.Count, 0); }
 		public TerminalNode Position() { return getToken(jfk1Parser.Position, 0); }
 		public ExpressionsReturningNumberContext expressionsReturningNumber() {
 			return getRuleContext(ExpressionsReturningNumberContext.class,0);
 		}
-		public TerminalNode None() { return getToken(jfk1Parser.None, 0); }
 		public OperationsReturningNumberContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -539,7 +532,7 @@ public class jfk1Parser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(83);
+			setState(76);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case Length:
@@ -602,35 +595,6 @@ public class jfk1Parser extends Parser {
 				}
 				}
 				break;
-			case None:
-				{
-				{
-				setState(76);
-				((OperationsReturningNumberContext)_localctx).op3ArgListList = _input.LT(1);
-				_la = _input.LA(1);
-				if ( !(_la==None) ) {
-					((OperationsReturningNumberContext)_localctx).op3ArgListList = (Token)_errHandler.recoverInline(this);
-				}
-				else {
-					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-					_errHandler.reportMatch(this);
-					consume();
-				}
-				{
-				setState(77);
-				match(T__5);
-				setState(78);
-				expressionsReturningList();
-				setState(79);
-				match(T__2);
-				setState(80);
-				expressionsReturningList();
-				setState(81);
-				match(T__6);
-				}
-				}
-				}
-				break;
 			default:
 				throw new NoViableAltException(this);
 			}
@@ -679,13 +643,13 @@ public class jfk1Parser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(87);
+			setState(80);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__1:
 			case T__4:
 				{
-				setState(85);
+				setState(78);
 				listT();
 				}
 				break;
@@ -702,9 +666,8 @@ public class jfk1Parser extends Parser {
 			case Substract:
 			case Take:
 			case Drop:
-			case IntegerDigits:
 				{
-				setState(86);
+				setState(79);
 				operationsReturningList();
 				}
 				break;
@@ -756,14 +719,14 @@ public class jfk1Parser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(91);
+			setState(84);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__0:
 			case IntPart:
 			case PointFloat:
 				{
-				setState(89);
+				setState(82);
 				number();
 				}
 				break;
@@ -775,9 +738,8 @@ public class jfk1Parser extends Parser {
 			case Min:
 			case Max:
 			case Position:
-			case None:
 				{
-				setState(90);
+				setState(83);
 				operationsReturningNumber();
 				}
 				break;
@@ -829,7 +791,7 @@ public class jfk1Parser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(95);
+			setState(88);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case EOF:
@@ -845,9 +807,8 @@ public class jfk1Parser extends Parser {
 			case Substract:
 			case Take:
 			case Drop:
-			case IntegerDigits:
 				{
-				setState(93);
+				setState(86);
 				expressionsReturningList();
 				}
 				break;
@@ -860,11 +821,10 @@ public class jfk1Parser extends Parser {
 			case Min:
 			case Max:
 			case Position:
-			case None:
 			case IntPart:
 			case PointFloat:
 				{
-				setState(94);
+				setState(87);
 				expressionsReturningNumber();
 				}
 				break;
@@ -885,31 +845,30 @@ public class jfk1Parser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\"d\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\3"+
-		"\3\3\3\3\3\4\3\4\5\4\34\n\4\3\5\3\5\3\5\3\5\7\5\"\n\5\f\5\16\5%\13\5\3"+
-		"\5\3\5\3\5\3\5\5\5+\n\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3"+
-		"\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6A\n\6\3\7\3\7\3\7\3\7\3\7\3\7\3"+
-		"\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\5\7V\n\7\3\b\3\b\5"+
-		"\bZ\n\b\3\t\3\t\5\t^\n\t\3\n\3\n\5\nb\n\n\3\n\2\2\13\2\4\6\b\n\f\16\20"+
-		"\22\2\t\3\2\36\37\6\2\n\n\f\f\21\21\"\"\5\2\16\20\22\22\32\33\4\2\r\17"+
-		"\22\22\4\2\23\24\26\31\4\2\25\25\34\34\3\2\35\35\2e\2\24\3\2\2\2\4\26"+
-		"\3\2\2\2\6\33\3\2\2\2\b*\3\2\2\2\n@\3\2\2\2\fU\3\2\2\2\16Y\3\2\2\2\20"+
-		"]\3\2\2\2\22a\3\2\2\2\24\25\t\2\2\2\25\3\3\2\2\2\26\27\7\3\2\2\27\30\5"+
-		"\2\2\2\30\5\3\2\2\2\31\34\5\2\2\2\32\34\5\4\3\2\33\31\3\2\2\2\33\32\3"+
-		"\2\2\2\34\7\3\2\2\2\35#\7\4\2\2\36\37\5\6\4\2\37 \7\5\2\2 \"\3\2\2\2!"+
-		"\36\3\2\2\2\"%\3\2\2\2#!\3\2\2\2#$\3\2\2\2$&\3\2\2\2%#\3\2\2\2&\'\5\6"+
-		"\4\2\'(\7\6\2\2(+\3\2\2\2)+\7\7\2\2*\35\3\2\2\2*)\3\2\2\2+\t\3\2\2\2,"+
-		"-\t\3\2\2-.\7\b\2\2./\5\16\b\2/\60\7\t\2\2\60A\3\2\2\2\61\62\t\4\2\2\62"+
-		"\63\7\b\2\2\63\64\5\16\b\2\64\65\7\5\2\2\65\66\5\20\t\2\66\67\7\t\2\2"+
-		"\67A\3\2\2\289\t\5\2\29:\7\b\2\2:;\5\16\b\2;<\7\5\2\2<=\5\16\b\2=>\7\t"+
-		"\2\2>A\3\2\2\2?A\3\2\2\2@,\3\2\2\2@\61\3\2\2\2@8\3\2\2\2@?\3\2\2\2A\13"+
-		"\3\2\2\2BC\t\6\2\2CD\7\b\2\2DE\5\16\b\2EF\7\t\2\2FV\3\2\2\2GH\t\7\2\2"+
-		"HI\7\b\2\2IJ\5\16\b\2JK\7\5\2\2KL\5\20\t\2LM\7\t\2\2MV\3\2\2\2NO\t\b\2"+
-		"\2OP\7\b\2\2PQ\5\16\b\2QR\7\5\2\2RS\5\16\b\2ST\7\t\2\2TV\3\2\2\2UB\3\2"+
-		"\2\2UG\3\2\2\2UN\3\2\2\2V\r\3\2\2\2WZ\5\b\5\2XZ\5\n\6\2YW\3\2\2\2YX\3"+
-		"\2\2\2Z\17\3\2\2\2[^\5\6\4\2\\^\5\f\7\2][\3\2\2\2]\\\3\2\2\2^\21\3\2\2"+
-		"\2_b\5\16\b\2`b\5\20\t\2a_\3\2\2\2a`\3\2\2\2b\23\3\2\2\2\n\33#*@UY]a";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3 ]\4\2\t\2\4\3\t\3"+
+		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\3\3"+
+		"\3\3\3\3\4\3\4\5\4\34\n\4\3\5\3\5\3\5\3\5\7\5\"\n\5\f\5\16\5%\13\5\3\5"+
+		"\3\5\3\5\3\5\5\5+\n\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6"+
+		"\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6A\n\6\3\7\3\7\3\7\3\7\3\7\3\7\3\7"+
+		"\3\7\3\7\3\7\3\7\3\7\5\7O\n\7\3\b\3\b\5\bS\n\b\3\t\3\t\5\tW\n\t\3\n\3"+
+		"\n\5\n[\n\n\3\n\2\2\13\2\4\6\b\n\f\16\20\22\2\b\3\2\35\36\5\2\n\n\f\f"+
+		"\21\21\5\2\16\20\22\22\32\33\4\2\r\17\22\22\4\2\23\24\26\31\4\2\25\25"+
+		"\34\34\2]\2\24\3\2\2\2\4\26\3\2\2\2\6\33\3\2\2\2\b*\3\2\2\2\n@\3\2\2\2"+
+		"\fN\3\2\2\2\16R\3\2\2\2\20V\3\2\2\2\22Z\3\2\2\2\24\25\t\2\2\2\25\3\3\2"+
+		"\2\2\26\27\7\3\2\2\27\30\5\2\2\2\30\5\3\2\2\2\31\34\5\2\2\2\32\34\5\4"+
+		"\3\2\33\31\3\2\2\2\33\32\3\2\2\2\34\7\3\2\2\2\35#\7\4\2\2\36\37\5\6\4"+
+		"\2\37 \7\5\2\2 \"\3\2\2\2!\36\3\2\2\2\"%\3\2\2\2#!\3\2\2\2#$\3\2\2\2$"+
+		"&\3\2\2\2%#\3\2\2\2&\'\5\6\4\2\'(\7\6\2\2(+\3\2\2\2)+\7\7\2\2*\35\3\2"+
+		"\2\2*)\3\2\2\2+\t\3\2\2\2,-\t\3\2\2-.\7\b\2\2./\5\16\b\2/\60\7\t\2\2\60"+
+		"A\3\2\2\2\61\62\t\4\2\2\62\63\7\b\2\2\63\64\5\16\b\2\64\65\7\5\2\2\65"+
+		"\66\5\20\t\2\66\67\7\t\2\2\67A\3\2\2\289\t\5\2\29:\7\b\2\2:;\5\16\b\2"+
+		";<\7\5\2\2<=\5\16\b\2=>\7\t\2\2>A\3\2\2\2?A\3\2\2\2@,\3\2\2\2@\61\3\2"+
+		"\2\2@8\3\2\2\2@?\3\2\2\2A\13\3\2\2\2BC\t\6\2\2CD\7\b\2\2DE\5\16\b\2EF"+
+		"\7\t\2\2FO\3\2\2\2GH\t\7\2\2HI\7\b\2\2IJ\5\16\b\2JK\7\5\2\2KL\5\20\t\2"+
+		"LM\7\t\2\2MO\3\2\2\2NB\3\2\2\2NG\3\2\2\2O\r\3\2\2\2PS\5\b\5\2QS\5\n\6"+
+		"\2RP\3\2\2\2RQ\3\2\2\2S\17\3\2\2\2TW\5\6\4\2UW\5\f\7\2VT\3\2\2\2VU\3\2"+
+		"\2\2W\21\3\2\2\2X[\5\16\b\2Y[\5\20\t\2ZX\3\2\2\2ZY\3\2\2\2[\23\3\2\2\2"+
+		"\n\33#*@NRVZ";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

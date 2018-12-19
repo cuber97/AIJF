@@ -26,7 +26,6 @@ Max           : 'max';
 Take          : 'take';
 Drop          : 'drop';
 Position      : 'position';
-None          : 'none';
 
 
 
@@ -57,7 +56,6 @@ operationsReturningList :
 (op1ArgList=(
      /*Lista operacji z argumentem (listT)*/
      Reverse
-     |IntegerDigits
      |Sort
      |List
 /*------------------------------------*/
@@ -105,13 +103,6 @@ Count
 |Position
 /*------------------------------------*/
 )('('expressionsReturningList ',' expressionsReturningNumber ')'))
-|
-(op3ArgListList=(
-/*Lista operacji z argumentami (listT,listT)*/
-None
-|None
-/*------------------------------------*/
-)('('expressionsReturningList ',' expressionsReturningList ')'))
 );
 
 /*B)WYRAZENIA (w podziale na typ zwracanego el.)*/
