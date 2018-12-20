@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class jfk1OpImpl {
+public class Jfk1OpImpl {
 
 
     //OPERATIONS RETURNING Number

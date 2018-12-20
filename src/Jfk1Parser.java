@@ -1,4 +1,4 @@
-// Generated from jfk1.g4 by ANTLR 4.7
+// Generated from Jfk1.g4 by ANTLR 4.7
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class jfk1Parser extends Parser {
+public class Jfk1Parser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -75,7 +75,7 @@ public class jfk1Parser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "jfk1.g4"; }
+	public String getGrammarFileName() { return "Jfk1.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -86,28 +86,28 @@ public class jfk1Parser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public jfk1Parser(TokenStream input) {
+	public Jfk1Parser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class PNumberContext extends ParserRuleContext {
-		public TerminalNode IntPart() { return getToken(jfk1Parser.IntPart, 0); }
-		public TerminalNode PointFloat() { return getToken(jfk1Parser.PointFloat, 0); }
+		public TerminalNode IntPart() { return getToken(Jfk1Parser.IntPart, 0); }
+		public TerminalNode PointFloat() { return getToken(Jfk1Parser.PointFloat, 0); }
 		public PNumberContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_pNumber; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterPNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterPNumber(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitPNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitPNumber(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitPNumber(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitPNumber(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -152,15 +152,15 @@ public class jfk1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_mNumber; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterMNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterMNumber(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitMNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitMNumber(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitMNumber(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitMNumber(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -201,15 +201,15 @@ public class jfk1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_number; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterNumber(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitNumber(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitNumber(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitNumber(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -264,15 +264,15 @@ public class jfk1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_listT; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterListT(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterListT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitListT(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitListT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitListT(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitListT(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -340,40 +340,40 @@ public class jfk1Parser extends Parser {
 		public Token op1ArgList;
 		public Token op2ArgListNumber;
 		public Token op2ArgListList;
-		public TerminalNode Reverse() { return getToken(jfk1Parser.Reverse, 0); }
-		public TerminalNode Sort() { return getToken(jfk1Parser.Sort, 0); }
-		public TerminalNode List() { return getToken(jfk1Parser.List, 0); }
+		public TerminalNode Reverse() { return getToken(Jfk1Parser.Reverse, 0); }
+		public TerminalNode Sort() { return getToken(Jfk1Parser.Sort, 0); }
+		public TerminalNode List() { return getToken(Jfk1Parser.List, 0); }
 		public List<ExpressionsReturningListContext> expressionsReturningList() {
 			return getRuleContexts(ExpressionsReturningListContext.class);
 		}
 		public ExpressionsReturningListContext expressionsReturningList(int i) {
 			return getRuleContext(ExpressionsReturningListContext.class,i);
 		}
-		public TerminalNode Take() { return getToken(jfk1Parser.Take, 0); }
-		public TerminalNode Drop() { return getToken(jfk1Parser.Drop, 0); }
-		public TerminalNode Power() { return getToken(jfk1Parser.Power, 0); }
-		public TerminalNode Add() { return getToken(jfk1Parser.Add, 0); }
-		public TerminalNode Substract() { return getToken(jfk1Parser.Substract, 0); }
-		public TerminalNode Multiply() { return getToken(jfk1Parser.Multiply, 0); }
+		public TerminalNode Take() { return getToken(Jfk1Parser.Take, 0); }
+		public TerminalNode Drop() { return getToken(Jfk1Parser.Drop, 0); }
+		public TerminalNode Power() { return getToken(Jfk1Parser.Power, 0); }
+		public TerminalNode Add() { return getToken(Jfk1Parser.Add, 0); }
+		public TerminalNode Substract() { return getToken(Jfk1Parser.Substract, 0); }
+		public TerminalNode Multiply() { return getToken(Jfk1Parser.Multiply, 0); }
 		public ExpressionsReturningNumberContext expressionsReturningNumber() {
 			return getRuleContext(ExpressionsReturningNumberContext.class,0);
 		}
-		public TerminalNode Join() { return getToken(jfk1Parser.Join, 0); }
+		public TerminalNode Join() { return getToken(Jfk1Parser.Join, 0); }
 		public OperationsReturningListContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_operationsReturningList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterOperationsReturningList(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterOperationsReturningList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitOperationsReturningList(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitOperationsReturningList(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitOperationsReturningList(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitOperationsReturningList(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -492,17 +492,17 @@ public class jfk1Parser extends Parser {
 	public static class OperationsReturningNumberContext extends ParserRuleContext {
 		public Token op1ArgList;
 		public Token op2ArgListNumber;
-		public TerminalNode Length() { return getToken(jfk1Parser.Length, 0); }
-		public TerminalNode Total() { return getToken(jfk1Parser.Total, 0); }
-		public TerminalNode First() { return getToken(jfk1Parser.First, 0); }
-		public TerminalNode Last() { return getToken(jfk1Parser.Last, 0); }
-		public TerminalNode Min() { return getToken(jfk1Parser.Min, 0); }
-		public TerminalNode Max() { return getToken(jfk1Parser.Max, 0); }
+		public TerminalNode Length() { return getToken(Jfk1Parser.Length, 0); }
+		public TerminalNode Total() { return getToken(Jfk1Parser.Total, 0); }
+		public TerminalNode First() { return getToken(Jfk1Parser.First, 0); }
+		public TerminalNode Last() { return getToken(Jfk1Parser.Last, 0); }
+		public TerminalNode Min() { return getToken(Jfk1Parser.Min, 0); }
+		public TerminalNode Max() { return getToken(Jfk1Parser.Max, 0); }
 		public ExpressionsReturningListContext expressionsReturningList() {
 			return getRuleContext(ExpressionsReturningListContext.class,0);
 		}
-		public TerminalNode Count() { return getToken(jfk1Parser.Count, 0); }
-		public TerminalNode Position() { return getToken(jfk1Parser.Position, 0); }
+		public TerminalNode Count() { return getToken(Jfk1Parser.Count, 0); }
+		public TerminalNode Position() { return getToken(Jfk1Parser.Position, 0); }
 		public ExpressionsReturningNumberContext expressionsReturningNumber() {
 			return getRuleContext(ExpressionsReturningNumberContext.class,0);
 		}
@@ -512,15 +512,15 @@ public class jfk1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_operationsReturningNumber; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterOperationsReturningNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterOperationsReturningNumber(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitOperationsReturningNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitOperationsReturningNumber(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitOperationsReturningNumber(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitOperationsReturningNumber(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -624,15 +624,15 @@ public class jfk1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expressionsReturningList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterExpressionsReturningList(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterExpressionsReturningList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitExpressionsReturningList(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitExpressionsReturningList(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitExpressionsReturningList(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitExpressionsReturningList(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -700,15 +700,15 @@ public class jfk1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expressionsReturningNumber; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterExpressionsReturningNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterExpressionsReturningNumber(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitExpressionsReturningNumber(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitExpressionsReturningNumber(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitExpressionsReturningNumber(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitExpressionsReturningNumber(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -772,15 +772,15 @@ public class jfk1Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).enterExpression(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).enterExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof jfk1Listener ) ((jfk1Listener)listener).exitExpression(this);
+			if ( listener instanceof Jfk1Listener ) ((Jfk1Listener)listener).exitExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof jfk1Visitor ) return ((jfk1Visitor<? extends T>)visitor).visitExpression(this);
+			if ( visitor instanceof Jfk1Visitor ) return ((Jfk1Visitor<? extends T>)visitor).visitExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}

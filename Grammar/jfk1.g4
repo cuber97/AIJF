@@ -1,4 +1,4 @@
-grammar jfk1;
+grammar Jfk1;
 
 fragment SINGLE_SPACE   : '\u0020'; // ' '
 fragment TABULATION     : '\u0009'; // '\t'

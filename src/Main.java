@@ -1,18 +1,11 @@
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassWriter;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
 import java.util.Scanner;
 
-import static java.lang.System.err;
 import static java.lang.System.out;
 
 public class Main {
@@ -41,9 +34,9 @@ public class Main {
             if(input.equals("exit")){return;}
 
             CharStream charStream = CharStreams.fromString(input);
-            jfk1Lexer lexer = new jfk1Lexer(charStream);
+            Jfk1Lexer lexer = new Jfk1Lexer(charStream);
             TokenStream tokenStream = new CommonTokenStream(lexer);
-            jfk1Parser parser = new jfk1Parser(tokenStream);
+            Jfk1Parser parser = new Jfk1Parser(tokenStream);
             //parser.removeErrorListeners();
             parser.setBuildParseTree(true);
             ParseTree tree = parser.expression();
