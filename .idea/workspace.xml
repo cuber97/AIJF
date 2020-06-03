@@ -1,295 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2991382a-4563-43c2-a7c5-520a796178eb" name="Default Changelist" comment="">
+    <list default="true" id="2991382a-4563-43c2-a7c5-520a796178eb" name="Default Changelist" comment="added">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grammar/01.antlr.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Grammar/01.antlr.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grammar/03.grun.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Grammar/03.grun.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grammar/04.grun.tree.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Grammar/04.grun.tree.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grammar/PolishNotation.g4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grammar/ShiftReduce.g4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grammar/jfk1.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Grammar/jfk1.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/CompilationClassVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/TreeCompilationListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/TreeEvaluationVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/TreeEvaluationVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1BaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1BaseListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1BaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1BaseVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Lexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Lexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Lexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Listener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1OpImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1OpImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$ExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$ExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$ExpressionsReturningListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$ExpressionsReturningListContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$ExpressionsReturningNumberContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$ExpressionsReturningNumberContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$ListTContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$ListTContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$NumberContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$NumberContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$OperationsReturningListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$OperationsReturningListContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$OperationsReturningNumberContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser$OperationsReturningNumberContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Visitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/jfk1Visitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TreeEvaluationVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TreeEvaluationVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1BaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1BaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1BaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1BaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1Lexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1Lexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1OpImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1OpImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jfk1Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jfk1Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/CompilationClassVisitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/TreeCompilationListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/TreeEvaluationVisitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/TreeEvaluationVisitor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/TreeEvaluationVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JFK_L1/TreeEvaluationVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijf.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfBaseListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfBaseVisitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfLexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfLexer.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfOpImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfParser$ExpressionContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfParser$ExpressionsReturningListContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfParser$ExpressionsReturningNumberContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfParser$ListTContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfParser$NumberContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfParser$OperationsReturningListContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfParser$OperationsReturningNumberContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AIJF/aijfVisitor.class" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-696907573">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="3" />
-          <entry key="g4" value="3" />
-          <entry key="java" value="7" />
-          <entry key="tokens" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="ANTLR v4 grammar file" value="3" />
-          <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="7" />
-          <entry key="PLAIN_TEXT" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="g4" value="3" />
-          <entry key="java" value="1146" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="ANTLR v4 grammar file" value="3" />
-          <entry key="JAVA" value="1146" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="414903958">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="g4" value="1" />
-          <entry key="java" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="ANTLR v4 grammar file" value="1" />
-          <entry key="JAVA" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="4" />
-          <entry key="g4" value="109" />
-          <entry key="java" value="199" />
-          <entry key="txt" value="157" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="ANTLR v4 grammar file" value="109" />
-          <entry key="JAVA" value="199" />
-          <entry key="PLAIN_TEXT" value="161" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Grammar/Jfk1.g4">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jfk1OpImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2397">
-              <caret line="145" selection-start-line="145" selection-end-line="145" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CompilationClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TreeEvaluationVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="197" column="56" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="56" />
-              <folding>
-                <element signature="method#visitNumber#0;class#TreeEvaluationVisitor#0" />
-                <element signature="method#visitListT#0;class#TreeEvaluationVisitor#0" />
-                <element signature="method#visitOperationsReturningNumber#0;class#TreeEvaluationVisitor#0" />
-                <element signature="method#visitOperationsReturningList#0;class#TreeEvaluationVisitor#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/ExpressionContainer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>join</find>
-      <find>subtra</find>
-      <find>s</find>
-      <find>sub</find>
-      <find>subs</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/jfk1Parser.java" />
-        <option value="$PROJECT_DIR$/src/containers/ExpressionContainer.java" />
-        <option value="$PROJECT_DIR$/src/jfk1OpImpl.java" />
-        <option value="$PROJECT_DIR$/src/TreeEvaluationVisitor.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/CompilationClass.java" />
-        <option value="$PROJECT_DIR$/Grammar/jfk1.g4" />
-        <option value="$PROJECT_DIR$/Grammar/Jfk1.g4" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1615" />
-    <option name="height" value="880" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="JFK_L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JFK_L1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JFK_L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JFK_L1" type="462c0819:PsiDirectoryNode" />
-              <item name="Grammar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JFK_L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JFK_L1" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JFK_L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JFK_L1" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JFK_L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JFK_L1" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JFK_L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JFK_L1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JFK_L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JFK_L1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JFK_L1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1co2Gila3taRihgmLX5NsTuoKz9" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545332809471" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JFK_L1" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -306,7 +57,54 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="JFK_L1" />
+      <module name="AIJF" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="AIJF" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="AIJF" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -333,6 +131,7 @@
       <workItem from="1545154649768" duration="5513000" />
       <workItem from="1545249099534" duration="11444000" />
       <workItem from="1545324801461" duration="2673000" />
+      <workItem from="1591180533607" duration="9398000" />
     </task>
     <task id="LOCAL-00001" summary="fixed error on visitListT">
       <created>1545249809291</created>
@@ -376,52 +175,36 @@
       <option name="project" value="LOCAL" />
       <updated>1545261108917</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="renamed files">
+      <created>1591182055961</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591182055962</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added intersection and removeDuplicates">
+      <created>1591189515433</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591189515433</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22575000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657718" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4966443" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Tool Output" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.21879195" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286119" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="13" sideWeight="0.78120804" weight="0.3045326" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed error on visitListT" />
@@ -430,130 +213,8 @@
     <MESSAGE value="add minor fix to numbers" />
     <MESSAGE value="cleaned clone" />
     <MESSAGE value="cleaned .g4" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned .g4" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/production/JFK_L1/Jfk1Visitor.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/JFK_L1/Jfk1Lexer.tokens">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/JFK_L1/Function.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/JFK_L1/CompilationClassVisitor.class" />
-    <entry file="file://$PROJECT_DIR$/src/Jfk1Lexer.tokens">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JFK_L1.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jfk1Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3365">
-          <caret line="852" column="22" selection-start-line="852" selection-start-column="22" selection-end-line="852" selection-end-column="22" />
-          <folding>
-            <element signature="e#2761#2762#0" expanded="true" />
-            <element signature="e#2785#2786#0" expanded="true" />
-            <element signature="e#2835#2836#0" expanded="true" />
-            <element signature="e#2859#2860#0" expanded="true" />
-            <element signature="e#3553#3554#0" expanded="true" />
-            <element signature="e#3590#3591#0" expanded="true" />
-            <element signature="e#4983#4984#0" expanded="true" />
-            <element signature="e#5037#5038#0" expanded="true" />
-            <element signature="e#5108#5109#0" expanded="true" />
-            <element signature="e#5145#5146#0" expanded="true" />
-            <element signature="e#6343#6344#0" expanded="true" />
-            <element signature="e#6397#6398#0" expanded="true" />
-            <element signature="e#6433#6434#0" expanded="true" />
-            <element signature="e#6487#6488#0" expanded="true" />
-            <element signature="e#6557#6558#0" expanded="true" />
-            <element signature="e#6594#6595#0" expanded="true" />
-            <element signature="e#8039#8040#0" expanded="true" />
-            <element signature="e#8091#8092#0" expanded="true" />
-            <element signature="e#8130#8131#0" expanded="true" />
-            <element signature="e#8183#8184#0" expanded="true" />
-            <element signature="e#8252#8253#0" expanded="true" />
-            <element signature="e#8289#8290#0" expanded="true" />
-            <element signature="e#11632#11633#0" expanded="true" />
-            <element signature="e#11669#11670#0" expanded="true" />
-            <element signature="e#16552#16553#0" expanded="true" />
-            <element signature="e#16589#16590#0" expanded="true" />
-            <element signature="e#20151#20152#0" expanded="true" />
-            <element signature="e#20203#20204#0" expanded="true" />
-            <element signature="e#20429#20430#0" expanded="true" />
-            <element signature="e#20466#20467#0" expanded="true" />
-            <element signature="e#22272#22273#0" expanded="true" />
-            <element signature="e#22325#22326#0" expanded="true" />
-            <element signature="e#24675#24676#0" expanded="true" />
-            <element signature="e#24712#24713#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TreeCompilationListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/CompilationClassVisitor.java" />
-    <entry file="file://$PROJECT_DIR$/src/Jfk1OpImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="145" selection-start-line="145" selection-end-line="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompilationClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TreeEvaluationVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="197" column="56" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="56" />
-          <folding>
-            <element signature="method#visitNumber#0;class#TreeEvaluationVisitor#0" />
-            <element signature="method#visitListT#0;class#TreeEvaluationVisitor#0" />
-            <element signature="method#visitOperationsReturningNumber#0;class#TreeEvaluationVisitor#0" />
-            <element signature="method#visitOperationsReturningList#0;class#TreeEvaluationVisitor#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jfk1BaseVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/ExpressionContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Grammar/ShiftReduce.g4">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Grammar/PolishNotation.g4">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Grammar/Jfk1.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <MESSAGE value="renamed files" />
+    <MESSAGE value="added intersection and removeDuplicates" />
+    <option name="LAST_COMMIT_MESSAGE" value="added intersection and removeDuplicates" />
   </component>
 </project>

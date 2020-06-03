@@ -1,8 +1,8 @@
 import containers.ExpressionContainer;
 
-public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionContainer> {
+public final class TreeEvaluationVisitor extends AijfBaseVisitor<ExpressionContainer> {
 
-    @Override public ExpressionContainer visitNumber(Jfk1Parser.NumberContext ctx) {
+    @Override public ExpressionContainer visitNumber(AijfParser.NumberContext ctx) {
         try {
         double number = Main.parse(ctx.getText());
         return new ExpressionContainer(number);
@@ -10,7 +10,7 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
         throw new IllegalArgumentException();
     } }
 
-    @Override public ExpressionContainer visitListT(Jfk1Parser.ListTContext ctx) {
+    @Override public ExpressionContainer visitListT(AijfParser.ListTContext ctx) {
         ExpressionContainer childItems = new ExpressionContainer();
         Double childNumber;
         for(int i = 1 ; i < ctx.getChildCount() ; i+=2){
@@ -22,7 +22,7 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
         return childItems;
     }
 
-    @Override public ExpressionContainer visitOperationsReturningNumber(Jfk1Parser.OperationsReturningNumberContext ctx) {
+    @Override public ExpressionContainer visitOperationsReturningNumber(AijfParser.OperationsReturningNumberContext ctx) {
         if (ctx.getChildCount() == 0) return new ExpressionContainer();
         ExpressionContainer par1 = visit(ctx.getChild(2));
         ExpressionContainer par2 = new ExpressionContainer();
@@ -37,33 +37,33 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
 
         if (ctx.op1ArgList != null) {
             switch (ctx.op1ArgList.getType()) {
-                case Jfk1Parser.Max: {
-                    Jfk1OpImpl.max(par1);
+                case AijfParser.Max: {
+                    AijfOpImpl.max(par1);
                     System.out.print("Max = ");
                     break;
                 }
-                case Jfk1Parser.Min: {
-                    Jfk1OpImpl.min(par1);
+                case AijfParser.Min: {
+                    AijfOpImpl.min(par1);
                     System.out.print("Min = ");
                     break;
                 }
-                case Jfk1Parser.First: {
-                    Jfk1OpImpl.first(par1);
+                case AijfParser.First: {
+                    AijfOpImpl.first(par1);
                     System.out.print("First = ");
                     break;
                 }
-                case Jfk1Parser.Last: {
-                    Jfk1OpImpl.last(par1);
+                case AijfParser.Last: {
+                    AijfOpImpl.last(par1);
                     System.out.print("Last = ");
                     break;
                 }
-                case Jfk1Parser.Length: {
-                    Jfk1OpImpl.length(par1);
+                case AijfParser.Length: {
+                    AijfOpImpl.length(par1);
                     System.out.print("Length = ");
                     break;
                 }
-                case Jfk1Parser.Total: {
-                    Jfk1OpImpl.total(par1);
+                case AijfParser.Total: {
+                    AijfOpImpl.total(par1);
                     System.out.println("Total = ");
                     break;
                 }
@@ -72,13 +72,13 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
 
         if (ctx.op2ArgListNumber != null) {
             switch (ctx.op2ArgListNumber.getType()) {
-                case Jfk1Parser.Count: {
-                    Jfk1OpImpl.count(par1, par2.removeElement());
+                case AijfParser.Count: {
+                    AijfOpImpl.count(par1, par2.removeElement());
                     System.out.print("Count = ");
                     break;
                 }
-                case Jfk1Parser.Position: {
-                    Jfk1OpImpl.position(par1, par2.removeElement());
+                case AijfParser.Position: {
+                    AijfOpImpl.position(par1, par2.removeElement());
                     System.out.print("Position = ");
                     break;
                 }
@@ -87,7 +87,7 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
     System.out.println(par1.toStringNumber());
     return par1;
 }
-    @Override public ExpressionContainer visitOperationsReturningList(Jfk1Parser.OperationsReturningListContext ctx) {
+    @Override public ExpressionContainer visitOperationsReturningList(AijfParser.OperationsReturningListContext ctx) {
         if(ctx.getChildCount() == 0) return new ExpressionContainer();
         ExpressionContainer par1 = visit(ctx.getChild(2));
         ExpressionContainer par2 = new ExpressionContainer();
@@ -97,18 +97,23 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
 
         if(ctx.op1ArgList != null) {
             switch (ctx.op1ArgList.getType()) {
-                case Jfk1Parser.Reverse: {
-                    Jfk1OpImpl.reverse(par1);
+                case AijfParser.Reverse: {
+                    AijfOpImpl.reverse(par1);
                     System.out.print("Reverse = ");
                     break;
                 }
-                case Jfk1Parser.Sort: {
-                    Jfk1OpImpl.sort(par1);
+                case AijfParser.Sort: {
+                    AijfOpImpl.sort(par1);
                     System.out.print("Sort = ");
                     break;
                 }
-                case Jfk1Parser.List: {
-                    Jfk1OpImpl.list(par1);
+                case AijfParser.RemoveDuplicates: {
+                    AijfOpImpl.removeDuplicates(par1);
+                    System.out.print("Remove = ");
+                    break;
+                }
+                case AijfParser.List: {
+                    AijfOpImpl.list(par1);
                     System.out.print("List = ");
                     break;
                 }
@@ -116,32 +121,37 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
         }
         if(ctx.op2ArgListList != null) {
             switch (ctx.op2ArgListList.getType()) {
-                case Jfk1Parser.Join: {
-                    Jfk1OpImpl.join(par1, par2);
+                case AijfParser.Join: {
+                    AijfOpImpl.join(par1, par2);
                     System.out.print("Join = ");
                     break;
                 }
-                case Jfk1Parser.Add: {
+                case AijfParser.Intersection: {
+                    AijfOpImpl.intersection(par1, par2);
+                    System.out.print("Intersection = ");
+                    break;
+                }
+                case AijfParser.Add: {
                     if(par2.getcType() == ExpressionContainer.Type.Number) {
                         break;
                     }
-                    Jfk1OpImpl.add(par1, par2);
+                    AijfOpImpl.add(par1, par2);
                     System.out.print("Add = ");
                     break;
                 }
-                case Jfk1Parser.Substract: {
+                case AijfParser.Substract: {
                     if(par2.getcType() == ExpressionContainer.Type.Number) {
                         break;
                     }
-                    Jfk1OpImpl.substract(par1, par2);
+                    AijfOpImpl.substract(par1, par2);
                     System.out.print("Substract = ");
                     break;
                 }
-                case Jfk1Parser.Multiply: {
+                case AijfParser.Multiply: {
                     if(par2.getcType() == ExpressionContainer.Type.Number) {
                         break;
                     }
-                    Jfk1OpImpl.multiply(par1, par2);
+                    AijfOpImpl.multiply(par1, par2);
                     System.out.print("Multiply = ");
                     break;
                 }
@@ -149,42 +159,42 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
         }
         if(ctx.op2ArgListNumber != null) {
             switch (ctx.op2ArgListNumber.getType()) {
-                case Jfk1Parser.Take: {
-                    Jfk1OpImpl.take(par1, par2.removeElement());
+                case AijfParser.Take: {
+                    AijfOpImpl.take(par1, par2.removeElement());
                     System.out.print("Take = ");
                     break;
                 }
-                case Jfk1Parser.Drop: {
-                    Jfk1OpImpl.drop(par1, par2.removeElement());
+                case AijfParser.Drop: {
+                    AijfOpImpl.drop(par1, par2.removeElement());
                     System.out.print("Drop = ");
                     break;
                 }
-                case Jfk1Parser.Power: {
-                    Jfk1OpImpl.power(par1, par2.removeElement());
+                case AijfParser.Power: {
+                    AijfOpImpl.power(par1, par2.removeElement());
                     System.out.print("Power = ");
                     break;
                 }
-                case Jfk1Parser.Add: {
+                case AijfParser.Add: {
                     if(par2.getcType() == ExpressionContainer.Type.List) {
                         break;
                     }
-                    Jfk1OpImpl.add(par1, par2.removeElement());
+                    AijfOpImpl.add(par1, par2.removeElement());
                     System.out.print("Add = ");
                     break;
                 }
-                case Jfk1Parser.Substract: {
+                case AijfParser.Substract: {
                     if(par2.getcType() == ExpressionContainer.Type.List) {
                         break;
                     }
-                    Jfk1OpImpl.substract(par1, par2.removeElement());
+                    AijfOpImpl.substract(par1, par2.removeElement());
                     System.out.print("Substract = ");
                     break;
                 }
-                case Jfk1Parser.Multiply: {
+                case AijfParser.Multiply: {
                     if(par2.getcType() == ExpressionContainer.Type.List) {
                         break;
                     }
-                    Jfk1OpImpl.multiply(par1, par2.removeElement());
+                    AijfOpImpl.multiply(par1, par2.removeElement());
                     System.out.print("Multiply = ");
                     break;
                 }
@@ -195,7 +205,7 @@ public final class TreeEvaluationVisitor extends Jfk1BaseVisitor<ExpressionConta
 
     }
 
-    @Override public ExpressionContainer visitExpression(Jfk1Parser.ExpressionContext ctx) {
+    @Override public ExpressionContainer visitExpression(AijfParser.ExpressionContext ctx) {
         ExpressionContainer childList = visit(ctx.getChild(0));
 
         System.out.print("Expression result = ");

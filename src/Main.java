@@ -34,10 +34,10 @@ public class Main {
             if(input.equals("exit")){return;}
 
             CharStream charStream = CharStreams.fromString(input);
-            Jfk1Lexer lexer = new Jfk1Lexer(charStream);
+            AijfLexer lexer = new AijfLexer(charStream);
             TokenStream tokenStream = new CommonTokenStream(lexer);
-            Jfk1Parser parser = new Jfk1Parser(tokenStream);
-            //parser.removeErrorListeners();
+            AijfParser parser = new AijfParser(tokenStream);
+            parser.removeErrorListeners();
             parser.setBuildParseTree(true);
             ParseTree tree = parser.expression();
             int errors = parser.getNumberOfSyntaxErrors();

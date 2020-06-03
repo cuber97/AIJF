@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Jfk1OpImpl {
+public class AijfOpImpl {
 
 
     //OPERATIONS RETURNING Number
@@ -117,9 +117,31 @@ public class Jfk1OpImpl {
         return;
     }
 
+    public static void removeDuplicates(ExpressionContainer par1){
+        LinkedHashSet<Double> treeSet = new LinkedHashSet<>(par1.getItemContainer());
+        par1.getItemContainer().clear();
+        for (Double element: treeSet) {
+            par1.getItemContainer().add(element);
+        }
+        return;
+    }
+
     //2)Arg <List,List>
     public static void join(ExpressionContainer par1, ExpressionContainer par2){
         par1.getItemContainer().addAll(par2.getItemContainer());
+        return;
+    }
+
+    public static void intersection(ExpressionContainer par1, ExpressionContainer par2) {
+        Set<Double> temp = new LinkedHashSet<>();
+        for (Double element : par1.getItemContainer()) {
+            if(par2.getItemContainer().contains(element)) {
+                temp.add(element);
+            }
+        }
+
+        par1.getItemContainer().clear();
+        par1.getItemContainer().addAll(temp);
         return;
     }
 

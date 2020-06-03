@@ -1,4 +1,4 @@
-grammar Jfk1;
+grammar Aijf;
 
 fragment SINGLE_SPACE   : '\u0020'; // ' '
 fragment TABULATION     : '\u0009'; // '\t'
@@ -26,6 +26,8 @@ Max           : 'max';
 Take          : 'take';
 Drop          : 'drop';
 Position      : 'position';
+Intersection  : 'intersection';
+RemoveDuplicates : 'removeDuplicates';
 
 
 
@@ -58,6 +60,7 @@ operationsReturningList :
      Reverse
      |Sort
      |List
+     |RemoveDuplicates
 /*------------------------------------*/
 )('('expressionsReturningList')'))
 |
@@ -78,6 +81,7 @@ Join
 |Add
 |Substract
 |Multiply
+|Intersection
 /*------------------------------------*/
 )('('expressionsReturningList ',' expressionsReturningList ')'))
 |
