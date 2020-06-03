@@ -65,6 +65,33 @@ public class AijfOpImpl {
         par1.changeContainerType(ExpressionContainer.Type.Number);
     }
 
+    public static void average(ExpressionContainer par1){
+        double total = 0;
+
+        for(double element : par1.getItemContainer()){
+            total += element;
+        }
+
+        total /= par1.getItemContainer().size();
+
+        par1.clearContainer();
+        par1.addNumber(total);
+        par1.changeContainerType(ExpressionContainer.Type.Number);
+    }
+
+    public static void median(ExpressionContainer par1){
+        double total;
+        int index = par1.getItemContainer().size() / 2;
+        if (par1.getItemContainer().size() % 2 == 0) {
+            total = (par1.getItemContainer().get(index) + par1.getItemContainer().get(index-1)) / 2;
+        } else {
+            total = par1.getItemContainer().get(index);
+        }
+
+        par1.clearContainer();
+        par1.addNumber(total);
+        par1.changeContainerType(ExpressionContainer.Type.Number);
+    }
     //2)Arg <List,List>
 
 
@@ -100,6 +127,7 @@ public class AijfOpImpl {
     }
 
     //OPERATIONS RETURNING LIST
+
     //1)Arg <List>
     public static void reverse(ExpressionContainer par1){
         Collections.reverse(par1.getItemContainer());
@@ -114,6 +142,11 @@ public class AijfOpImpl {
 
     public static void sort(ExpressionContainer par1){
         Collections.sort(par1.getItemContainer());
+        return;
+    }
+
+    public static void shuffle(ExpressionContainer par1){
+        Collections.shuffle(par1.getItemContainer());
         return;
     }
 
@@ -209,5 +242,10 @@ public class AijfOpImpl {
         for(int i = 0; i < par2; ++i) {
             par1.getItemContainer().remove(0);
         }
+    }
+
+    //4)Arg <Number>
+    public static void singleton(ExpressionContainer par1) {
+        par1.changeContainerType(ExpressionContainer.Type.List);
     }
 }

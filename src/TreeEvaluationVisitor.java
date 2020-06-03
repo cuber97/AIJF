@@ -67,6 +67,16 @@ public final class TreeEvaluationVisitor extends AijfBaseVisitor<ExpressionConta
                     System.out.println("Total = ");
                     break;
                 }
+                case AijfParser.Average: {
+                    AijfOpImpl.average(par1);
+                    System.out.println("Average = ");
+                    break;
+                }
+                case AijfParser.Median: {
+                    AijfOpImpl.median(par1);
+                    System.out.println("Median = ");
+                    break;
+                }
             }
         }
 
@@ -115,6 +125,11 @@ public final class TreeEvaluationVisitor extends AijfBaseVisitor<ExpressionConta
                 case AijfParser.List: {
                     AijfOpImpl.list(par1);
                     System.out.print("List = ");
+                    break;
+                }
+                case AijfParser.Shuffle: {
+                    AijfOpImpl.shuffle(par1);
+                    System.out.print("Shuffle = ");
                     break;
                 }
             }
@@ -196,6 +211,18 @@ public final class TreeEvaluationVisitor extends AijfBaseVisitor<ExpressionConta
                     }
                     AijfOpImpl.multiply(par1, par2.removeElement());
                     System.out.print("Multiply = ");
+                    break;
+                }
+            }
+        }
+        if(ctx.op1ArgNumber != null) {
+            switch (ctx.op1ArgNumber.getType()) {
+                case AijfParser.Singleton: {
+                    if(par1.getcType() == ExpressionContainer.Type.List) {
+                        break;
+                    }
+                    AijfOpImpl.singleton(par1);
+                    System.out.print("Singleton = ");
                     break;
                 }
             }

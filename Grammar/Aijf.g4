@@ -7,27 +7,29 @@ fragment CARRAIGE_RETURN: '\u000D'; // '\r'
 fragment DOT            : '.';
 fragment FRACTION       : DOT [0-9]* '0'..'9';
 
-List          : 'list' ;
-Range         : 'range';
-Reverse       : 'reverse';
-Join          : 'join';
-Add           : 'add';
-Multiply      : 'mult';
-Power         : 'pow';
-Sort          : 'sort';
-Substract      : 'sub';
-Length        : 'length';
-Total         : 'total';
-Count         : 'count';
-First         : 'first';
-Last          : 'last';
-Min           : 'min';
-Max           : 'max';
-Take          : 'take';
-Drop          : 'drop';
-Position      : 'position';
-Intersection  : 'intersection';
+Reverse          : 'reverse';
+Join             : 'join';
+Add              : 'add';
+Multiply         : 'mult';
+Power            : 'pow';
+Sort             : 'sort';
+Substract        : 'sub';
+Length           : 'length';
+Total            : 'total';
+Count            : 'count';
+First            : 'first';
+Last             : 'last';
+Min              : 'min';
+Max              : 'max';
+Take             : 'take';
+Drop             : 'drop';
+Position         : 'position';
+Intersection     : 'intersection';
 RemoveDuplicates : 'removeDuplicates';
+Average          : 'average';
+Median           : 'median';
+Shuffle          : 'shuffle';
+Singleton        : 'singleton';
 
 
 
@@ -48,7 +50,7 @@ mNumber    : '-'pNumber;
 number: pNumber | mNumber;
 
 
-listT     : '{' (number ',')* number '}'
+listT     : '{' (expressionsReturningNumber ',')* expressionsReturningNumber '}'
           | '{}'
           ;
 
@@ -61,8 +63,15 @@ operationsReturningList :
      |Sort
      |List
      |RemoveDuplicates
+     |Shuffle
 /*------------------------------------*/
 )('('expressionsReturningList')'))
+|
+(op1ArgNumber=
+     /*Lista operacji z argumentem (number)*/
+     Singleton
+/*------------------------------------*/
+('('expressionsReturningNumber')'))
 |
 (op2ArgListNumber=(
 /*Lista operacji z argumentami (listT,number)*/
@@ -98,6 +107,8 @@ Length
 |Last
 |Min
 |Max
+|Average
+|Median
 /*------------------------------------*/
 )('('expressionsReturningList')'))
 |
